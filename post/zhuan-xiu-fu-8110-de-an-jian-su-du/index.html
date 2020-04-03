@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>【转】修复8110的按键速度 | QQ floating ice</title>
-<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1585893027100">
+<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1585894148027">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
 
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://qqfloatingice.github.io/">
-  <img class="avatar" src="https://qqfloatingice.github.io//images/avatar.png?v=1585893027100" alt="">
+  <img class="avatar" src="https://qqfloatingice.github.io//images/avatar.png?v=1585894148027" alt="">
   </a>
   <h1 class="site-title">
     QQ floating ice
@@ -103,10 +103,11 @@
               <h2 id="tags">tags:</h2>
 <p><strong>本教程来自Banana-Hackers论坛，由<em>Sylvain D</em>提供原教程，<em>Vivek</em>改进，KaiOSLab翻译。</strong></p>
 <p>8110的一个经典问题是打字速度太过诡异，这里是解决(缓解)这个问题的方法</p>
+<p>***注意***在做如下步骤前请root你的手机，软件<a href="https://www.heppy.wang/archives/47/">点此</a>，教程<a href="https://www.heppy.wang/archives/94/">点此</a>——来自清水博客</p>
 <p>1.从system获得键盘应用的复制</p>
 <pre><code>adb pull /system/b2g/webapps/keyboard.gaiamobile.org
 </code></pre>
-<p>​		<strong>注意！经过测试，win10或者其他不明原因，执行上面的命令后，adb文件夹下不会出现keyboard.gaiamobile.org文件夹，所以会导致之后的命令失败，可以按时间顺序筛选出pull下来的文件，将他们放在新建的keyboard.gaiamobile.org文件夹即可。</strong></p>
+<p>​		<strong>注意！经过测试，win10或者其他不明原因，执行上面的命令后，adb文件夹下不会出现keyboard.gaiamobile.org文件夹，所以会导致之后的命令失败，可以按时间顺序筛选出pull下来的文件，将他们放在新建的keyboard.gaiamobile.org文件夹即可提示<a href="https://ufoalastor.github.io/QnL8BkKKv/">点此</a>来自——此店不售此书的博客。</strong></p>
 <p>2.打开application.zip   打开里面的/js/keypad.js（不要使用记事本，不需要解压）</p>
 <p>3.找到这一部分：</p>
 <pre><code class="language-js">Keypad.prototype.LONGPRESS_INTERVAL=1000;

@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>让老旧平板焕发新生 | QQ floating ice</title>
+<title>kaios百度翻译开发笔记 | QQ floating ice</title>
 <link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1585879306311">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
@@ -86,26 +86,79 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              让老旧平板焕发新生
+              kaios百度翻译开发笔记
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2020-04-02 ·
+                · 2020-04-03 ·
               </time>
               
-                <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="post-tags">
-                  # 电脑
+                <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="post-tags">
+                  # kaios
                 </a>
               
             </div>
             
             <div class="post-content">
-              <p>由于本人苦逼经常更换住址，所以发现原先的第二显示屏不便于携带使用。</p>
-<p><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=f614fc465e540923aa696376a259d1dc/515a03087bf40ad1197cc586402c11dfa8ecced8.jpg" alt=""></p>
-<p>所以迫切的需要一台便携的第二屏配合虚拟机使用，然而又因为快递还没恢复，于是我便把邪恶的目光看向了久经沙场的ipad4，我目前的方案是，在虚拟机上安装某远控软件现在成品是这样的。</p>
-<p><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=71d98df4da11728b302d8c2af8fdc3b3/3042f7246b600c33279ddcad0d4c510fd8f9a194.jpg" alt=""></p>
-<p>p.s.E490是真的弱鸡，虚拟机只能带一个</p>
-<p>随着一段时间的使用，目前我的体验是这样的，最好配合鼠标，键盘使用。虽然可以触控但是体验不是很好，并且建议轻度使用。要生产力的话，强烈推荐键盘鼠标。</p>
+              <p>有于本人英语特别渣，所以特别需要一个翻译来解决问题，又因为最近的网课可以摸鱼，所以在kaios开发了给简陋的翻译0.0.1（目前更新一直鸽着）。。。。</p>
+<p>所以有人看到这个贴子的话（我知道这个小破站基本没人来。。。）请把它进行改进</p>
+<p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
+<p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
+<p>这里给个参考代码</p>
+<p>&lt;!doctype html&gt;</p>
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Translate</title>  
+</head>  
+<body>  
+<div id="SRC">  
+<textarea id="srcText" name="srcText " style="width:500px; height:120px;">  
+</textarea>  
+<p><button id="Click" name="Click">Translate</button></p>
+</div>  
+<br />   
+<hr />  
+<div id="DST">  
+<textarea id="dstText" name="dstText" style="width:500px; height:120px;">  
+</textarea>  
+</div>  
+</body>  
+<script src="jquery-1.8.2.min.js" type="text/javascript"></script>  
+<script type="text/javascript">  
+<p>$(&quot;#Click&quot;).click(function (){</p>
+<p>var contents = $(&quot;#srcText&quot;).val() ;<br>
+alert(  contents) ;</p>
+<p>$.ajax({<br>
+type:&quot;get&quot;,<br>
+async:false,                                                 //must be synchronized<br>
+url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,<br>
+dataType:&quot;jsonp&quot;,<br>
+data: {<br>
+from: &quot;翻译的源语言&quot;,                                              //language choose<br>
+to: &quot;翻译成的语言&quot;,<br>
+client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key<br>
+q: contents<br>
+},<br>
+success:function(json , status){</p>
+<pre><code>        //alert(&quot;here is the status :&quot;+status) ;  
+        $(&quot;#dstText&quot;).empty() ;  
+
+        for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
+        {  
+        $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
+        }  
+    //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
+       
+  },  
+  error:function(){  
+      alert('Fail to translate with baidu API!');  
+  }  
+</code></pre>
+<p>});<br>
+}) ;</p>
+</script>  
+</html>  
 
             </div>
           </article>
@@ -114,9 +167,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://qqfloatingice.github.io//post/shou-ci-shi-xian-ying-he-wu-sun-gai-zhuang-bi-ji-ben-zhi-chi-fu-wu-qi-u2-ying-pan">
+            <a href="https://qqfloatingice.github.io//post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng">
               <h3 class="post-title">
-                首次实现硬核无损改装笔记本支持服务器U.2硬盘
+                让老旧平板焕发新生
               </h3>
             </a>
           </div>  

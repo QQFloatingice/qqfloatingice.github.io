@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://qqfloatingice.github.io/</id>
+    <title>QQ floating ice</title>
+    <updated>2020-04-03T08:28:01.879Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://qqfloatingice.github.io/"/>
+    <link rel="self" href="https://qqfloatingice.github.io/atom.xml"/>
+    <subtitle>A personal blog for QQ floating ice</subtitle>
+    <logo>https://qqfloatingice.github.io/images/avatar.png</logo>
+    <icon>https://qqfloatingice.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[【转】修复8110的按键速度]]></title>
+        <id>https://qqfloatingice.github.io/post/zhuan-xiu-fu-8110-de-an-jian-su-du/</id>
+        <link href="https://qqfloatingice.github.io/post/zhuan-xiu-fu-8110-de-an-jian-su-du/">
+        </link>
+        <updated>2020-04-03T05:18:05.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="tags">tags:</h2>
+<p><strong>本教程来自Banana-Hackers论坛，由<em>Sylvain D</em>提供原教程，<em>Vivek</em>改进，KaiOSLab翻译。</strong></p>
+<p>8110的一个经典问题是打字速度太过诡异，这里是解决(缓解)这个问题的方法</p>
+<p>***注意***在做如下步骤前请root你的手机，软件<a href="https://www.heppy.wang/archives/47/">点此</a>，教程<a href="https://www.heppy.wang/archives/94/">点此</a>——来自清水博客</p>
+<p>1.从system获得键盘应用的复制</p>
+<pre><code>adb pull /system/b2g/webapps/keyboard.gaiamobile.org
+</code></pre>
+<p>​		<strong>注意！经过测试，win10或者其他不明原因，执行上面的命令后，adb文件夹下不会出现keyboard.gaiamobile.org文件夹，所以会导致之后的命令失败，可以按时间顺序筛选出pull下来的文件，将他们放在新建的keyboard.gaiamobile.org文件夹即可提示<a href="https://ufoalastor.github.io/QnL8BkKKv/">点此</a>来自——此店不售此书的博客。</strong></p>
+<p>2.打开application.zip   打开里面的/js/keypad.js（不要使用记事本，不需要解压）</p>
+<p>3.找到这一部分：</p>
+<pre><code class="language-js">Keypad.prototype.LONGPRESS_INTERVAL=1000;
+Keypad.prototype.IDLE_INTERVAL=1000;
+</code></pre>
+<p>（VSCode可以按Ctrl+F查找）</p>
+<p>改为：</p>
+<pre><code class="language-js">Keypad.prototype.LONGPRESS_INTERVAL=500;
+Keypad.prototype.IDLE_INTERVAL=400;
+</code></pre>
+<p>4.在ADB命令行中执行</p>
+<pre><code class="language-bash">adb push keyboard.gaiamobile.org /data/local/webapps
+</code></pre>
+<p>5.使用下面的命令获得***webapps.json***</p>
+<pre><code>adb pull /data/local/webapps/webapps.json
+</code></pre>
+<p>6.打开ADB文件夹下的webapps.json</p>
+<p>找到这一行：</p>
+<pre><code>&quot;basePath&quot;: &quot;/system/b2g/webapps&quot;,
+</code></pre>
+<p>改成：</p>
+<pre><code>&quot;basePath&quot;: &quot;/data/local/webapps&quot;,
+</code></pre>
+<p>7.在ADB中逐行运行：</p>
+<pre><code>adb push webapps.json /data/local/webapps/
+</code></pre>
+<pre><code>adb reboot
+</code></pre>
+<p>8.重启后按键问题就会得到缓解</p>
+<p><strong>5<sub>7步的作用：防止更改system而引起的翻车恢复不了，执行5</sub>7步后，所有的更改将会在出厂设置后恢复，之前执行过的可以不执行5~7步</strong></p>
+<p><em><strong>————转自QQ old ice 的<a href="https://www.kaioslab.xyz/">KaiOSlab</a></strong></em></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[kaios百度翻译开发笔记]]></title>
+        <id>https://qqfloatingice.github.io/post/kaios-bai-du-fan-yi-kai-fa-bi-ji/</id>
+        <link href="https://qqfloatingice.github.io/post/kaios-bai-du-fan-yi-kai-fa-bi-ji/">
+        </link>
+        <updated>2020-04-03T01:17:42.000Z</updated>
+        <content type="html"><![CDATA[<p>有于本人英语特别渣，所以特别需要一个翻译来解决问题，又因为最近的网课可以摸鱼，所以在kaios开发了给简陋的翻译0.0.1（目前更新一直鸽着）。。。。</p>
+<p>所以有人看到这个贴子的话（我知道这个小破站基本没人来。。。）请把它进行改进</p>
+<p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
+<p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
+<p>这里给个参考代码</p>
+<pre><code>&lt;!doctype html&gt;  
+&lt;html lang=&quot;en&quot;&gt;  
+&lt;head&gt;  
+    &lt;meta charset=&quot;UTF-8&quot;&gt;  
+    &lt;title&gt;Translate&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;div id=&quot;SRC&quot;&gt;  
+&lt;textarea id=&quot;srcText&quot; name=&quot;srcText &quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+  
+&lt;button id=&quot;Click&quot; name=&quot;Click&quot;&gt;Translate&lt;/button&gt;  
+&lt;/div&gt;  
+  
+&lt;br /&gt;   
+&lt;hr /&gt;  
+&lt;div id=&quot;DST&quot;&gt;  
+&lt;textarea id=&quot;dstText&quot; name=&quot;dstText&quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+&lt;/div&gt;  
+  
+  
+&lt;/body&gt;  
+&lt;script src=&quot;jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
+&lt;script type=&quot;text/javascript&quot;&gt;  
+   
+$(&quot;#Click&quot;).click(function (){  
+  
+var contents = $(&quot;#srcText&quot;).val() ;  
+alert(  contents) ;  
+  
+  
+$.ajax({  
+       type:&quot;get&quot;,  
+       async:false,                                                 //must be synchronized  
+       url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,  
+       dataType:&quot;jsonp&quot;,  
+       data: {  
+           from: &quot;翻译的源语言&quot;,                                              //language choose  
+           to: &quot;翻译成的语言&quot;,  
+           client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key  
+           q: contents  
+       },     
+       success:function(json , status){  
+           
+            //alert(&quot;here is the status :&quot;+status) ;  
+            $(&quot;#dstText&quot;).empty() ;  
+  
+            for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
+            {  
+            $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
+            }  
+        //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
+           
+      },  
+      error:function(){  
+          alert('Fail to translate with baidu API!');  
+      }  
+});  
+}) ;  
+  
+&lt;/script&gt;  
+&lt;/html&gt;  
+	
+	
+
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[让老旧平板焕发新生]]></title>
+        <id>https://qqfloatingice.github.io/post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng/</id>
+        <link href="https://qqfloatingice.github.io/post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng/">
+        </link>
+        <updated>2020-04-02T14:49:09.000Z</updated>
+        <content type="html"><![CDATA[<p>由于本人苦逼经常更换住址，所以发现原先的第二显示屏不便于携带使用。</p>
+<figure data-type="image" tabindex="1"><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=f614fc465e540923aa696376a259d1dc/515a03087bf40ad1197cc586402c11dfa8ecced8.jpg" alt="" loading="lazy"></figure>
+<p>所以迫切的需要一台便携的第二屏配合虚拟机使用，然而又因为快递还没恢复，于是我便把邪恶的目光看向了久经沙场的ipad4，我目前的方案是，在虚拟机上安装某远控软件现在成品是这样的。</p>
+<figure data-type="image" tabindex="2"><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=71d98df4da11728b302d8c2af8fdc3b3/3042f7246b600c33279ddcad0d4c510fd8f9a194.jpg" alt="" loading="lazy"></figure>
+<p>p.s.E490是真的弱鸡，虚拟机只能带一个</p>
+<p>随着一段时间的使用，目前我的体验是这样的，最好配合鼠标，键盘使用。虽然可以触控但是体验不是很好，并且建议轻度使用。要生产力的话，强烈推荐键盘鼠标。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[首次实现硬核无损改装笔记本支持服务器U.2硬盘]]></title>
+        <id>https://qqfloatingice.github.io/post/shou-ci-shi-xian-ying-he-wu-sun-gai-zhuang-bi-ji-ben-zhi-chi-fu-wu-qi-u2-ying-pan/</id>
+        <link href="https://qqfloatingice.github.io/post/shou-ci-shi-xian-ying-he-wu-sun-gai-zhuang-bi-ji-ben-zhi-chi-fu-wu-qi-u2-ying-pan/">
+        </link>
+        <updated>2020-04-02T06:38:15.000Z</updated>
+        <content type="html"><![CDATA[<p>蓝天P570WM移动工作站准系统笔记本，X79芯片组，12核心处理器，双显卡槽，4个SATA接口，说出来你可能不信，我要改装笔记本支持U.2服务器硬盘!没错，手上拿的是800GB的intel P3600硬盘，说性能吗，mlc万年传家宝有多耐草自然不用说，哪怕是洋垃圾写了几百TB也不怕，性能上intel同容量mlc固态读写速度自然比不上3550/1800MB每秒的三星960pro，但是价格摆在那，服务器盘量大便宜，以后还有垃圾捡，等以后淘汰了上个Oracle的6.4TB固态，有多爽就不用说了，既然m2接口可以转换u2接口，在现在普及m2的时代，上服务器硬盘也不是不可能，好了，动工。<br>
+<img src="http://tiebapic.baidu.com/forum/w%3D580/sign=eb6427afa5fb43161a1f7a7210a44642/7e3e94cad1c8a7861f1e0d6a7009c93d70cf50bb.jpg" alt="" loading="lazy"></p>
+<p>当时实现M2的图</p>
+<p>神机配置<img src="http://tiebapic.baidu.com/forum/pic/item/91a164380cd79123d94a0b0eba345982b3b780c7.jpg" alt="" loading="lazy"></p>
+<p>开始，大家可能见过笔记本用台式机CPU，或者台式机级别的mxm独立显卡，但是，在nvme固态硬盘流行的今天，我想可以做点什么，手里有个p570wm笔记本，硬盘仓很大，可以放下15mm机械盘，我想既然能放15mm，那么，是否可以考虑一下把排线改造，增加nvme通道，和SATA接口整合到一起变成SFF－8639接口，然后上服务器U.2硬盘呢？说干就干，一看这个笔记本的结构，觉得可行，于是就动工了</p>
+<p>给大家普及一下什么是U.2接口，所谓U.2就是SATA接口的基础上，增加了SAS服务器硬盘的电路，以及Nvme固态硬盘的线路，一个U.2接口可以支持任何协议的硬盘</p>
+<p>说一下这台机器的来历，其实这台笔记本，你们当年应该有所耳闻，上过新闻的，还记得当年2014年京东21万的笔记本吗？没错！21万元!就是那台未来人类P57笔记本，实际上就是蓝天准系统P570WM模具贴个牌高价卖而已，当年2014年的配置达到了6核I7 4960X+两张gtx680sli的顶级配置，这笔记本说真的很BT，硬盘可以塞三个，还有一个光驱!现在2020年了，才开始普及6核心的笔记本，以前都是四核封顶，牙膏厂万年坑，唯独P570WM这台传奇机皇可以傲视群雄，放到现在，依然可以和蓝天P870TM笔记本相提并论，现在有很多淘汰的E5 2600处理器，很便宜性能也很强，P570WM上个E5 2697V2的12核心CPU，性能依然可以秒杀默认的9900k，而且CPU是四通道内存，就算是四根1600，性能也比双通道ddr4－3200强，服务器级别的配置，做到笔记本上，也是蓝天机皇的绝唱了，这台本子全球限量300台，十分稀有，然而，最大的短板就是，没有nvme固态硬盘，但是有多的显卡槽，在显卡性能强大的今天，我已经用不到双卡了，那么是否可以副卡位转接nvme呢？于是，开始了我的研究</p>
+<p>成品上图<br>
+<img src="http://tiebapic.baidu.com/forum/w%3D580/sign=8324344f22fae6cd0cb4ab693fb30f9e/a0d3b3119313b07ede8f85701bd7912397dd8cbd.jpg" alt="" loading="lazy"><br>
+p.s.本人不想折腾图床，暂时用贴吧如有水印请勿奇怪。。。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二奶机 thinkpad E490的简要测评]]></title>
+        <id>https://qqfloatingice.github.io/post/er-nai-ji-thinkpad-e490-de-jian-yao-ce-ping/</id>
+        <link href="https://qqfloatingice.github.io/post/er-nai-ji-thinkpad-e490-de-jian-yao-ce-ping/">
+        </link>
+        <updated>2019-11-20T07:27:29.000Z</updated>
+        <content type="html"><![CDATA[<p>由于蓝天P570WM过于笨重，再加上功耗和续航还有巨大的电源适配器，基本上就是台式机的命，再加上原先的ideapadU410的性能和续航问题，我决定重新买一台二奶。</p>
+<p>在TP专卖店JS的吹捧下，在加上我还有一台17年的X1翻转本，我买下了E490。</p>
+<p>关于外观，我就不多说了。虽然这一代的E系列虽然好了很多，但是还是有一些槽点的，我就不一一吐槽了。</p>
+<p>后来，我在使用的过程中我发现联想对该机的调教过于保守，使性能不能完全发挥，于是乎就下了Intel(R) Extreme Tuning Utility去掉了功耗墙，又通过降电压，跑满睿频,使CPU-Z的跑分上了2000，超过I5 7600！<br>
+<img src="https://imgsa.baidu.com/forum/w%3D580/sign=28a0e96d3afae6cd0cb4ab693fb20f9e/722309f790529822cd853199d8ca7bcb0a46d432.jpg" alt="" loading="lazy"><br>
+显卡方面，对于没有什么游戏需求的我，RX552海星，（据说有人拿它吃过鸡）。。。</p>
+<p>键盘方面，比我蓝天的键盘好多了，但是没有X1舒服（玄学问题）。。。个人觉得比机械打字舒服。。。</p>
+<p>屏幕。。。。。。。最大的槽点。。。。不说了</p>
+<p>总之，作为一台备用的二奶E490够了（至少性能比2017X1)强。。。。但是画图还是要X1.。。。</p>
+]]></content>
+    </entry>
+</feed>

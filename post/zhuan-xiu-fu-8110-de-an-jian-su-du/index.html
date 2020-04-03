@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>kaios百度翻译开发笔记 | QQ floating ice</title>
+<title>【转】修复8110的按键速度 | QQ floating ice</title>
 <link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1585891310779">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
@@ -86,92 +86,54 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              kaios百度翻译开发笔记
+              【转】修复8110的按键速度
             </h2>
             <div class="post-info">
               <time class="post-time">
                 · 2020-04-03 ·
               </time>
               
-                <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="post-tags">
-                  # kaios
-                </a>
-              
             </div>
             
             <div class="post-content">
-              <p>有于本人英语特别渣，所以特别需要一个翻译来解决问题，又因为最近的网课可以摸鱼，所以在kaios开发了给简陋的翻译0.0.1（目前更新一直鸽着）。。。。</p>
-<p>所以有人看到这个贴子的话（我知道这个小破站基本没人来。。。）请把它进行改进</p>
-<p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
-<p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
-<p>这里给个参考代码</p>
-<pre><code>&lt;!doctype html&gt;  
-&lt;html lang=&quot;en&quot;&gt;  
-&lt;head&gt;  
-    &lt;meta charset=&quot;UTF-8&quot;&gt;  
-    &lt;title&gt;Translate&lt;/title&gt;  
-&lt;/head&gt;  
-&lt;body&gt;  
-&lt;div id=&quot;SRC&quot;&gt;  
-&lt;textarea id=&quot;srcText&quot; name=&quot;srcText &quot; style=&quot;width:500px; height:120px;&quot;&gt;  
-&lt;/textarea&gt;  
-  
-&lt;button id=&quot;Click&quot; name=&quot;Click&quot;&gt;Translate&lt;/button&gt;  
-&lt;/div&gt;  
-  
-&lt;br /&gt;   
-&lt;hr /&gt;  
-&lt;div id=&quot;DST&quot;&gt;  
-&lt;textarea id=&quot;dstText&quot; name=&quot;dstText&quot; style=&quot;width:500px; height:120px;&quot;&gt;  
-&lt;/textarea&gt;  
-&lt;/div&gt;  
-  
-  
-&lt;/body&gt;  
-&lt;script src=&quot;jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
-&lt;script type=&quot;text/javascript&quot;&gt;  
-   
-$(&quot;#Click&quot;).click(function (){  
-  
-var contents = $(&quot;#srcText&quot;).val() ;  
-alert(  contents) ;  
-  
-  
-$.ajax({  
-       type:&quot;get&quot;,  
-       async:false,                                                 //must be synchronized  
-       url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,  
-       dataType:&quot;jsonp&quot;,  
-       data: {  
-           from: &quot;翻译的源语言&quot;,                                              //language choose  
-           to: &quot;翻译成的语言&quot;,  
-           client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key  
-           q: contents  
-       },     
-       success:function(json , status){  
-           
-            //alert(&quot;here is the status :&quot;+status) ;  
-            $(&quot;#dstText&quot;).empty() ;  
-  
-            for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
-            {  
-            $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
-            }  
-        //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
-           
-      },  
-      error:function(){  
-          alert('Fail to translate with baidu API!');  
-      }  
-});  
-}) ;  
-  
-&lt;/script&gt;  
-&lt;/html&gt;  
-	
-	
-
+              <h2 id="tags">tags:</h2>
+<p><strong>本教程来自Banana-Hackers论坛，由<em>Sylvain D</em>提供原教程，<em>Vivek</em>改进，KaiOSLab翻译。</strong></p>
+<p>8110的一个经典问题是打字速度太过诡异，这里是解决(缓解)这个问题的方法</p>
+<p>1.从system获得键盘应用的复制</p>
+<pre><code>adb pull /system/b2g/webapps/keyboard.gaiamobile.org
 </code></pre>
+<p>​		<strong>注意！经过测试，win10或者其他不明原因，执行上面的命令后，adb文件夹下不会出现keyboard.gaiamobile.org文件夹，所以会导致之后的命令失败，可以按时间顺序筛选出pull下来的文件，将他们放在新建的keyboard.gaiamobile.org文件夹即可。</strong></p>
+<p>2.打开application.zip   打开里面的/js/keypad.js（不要使用记事本，不需要解压）</p>
+<p>3.找到这一部分：</p>
+<pre><code class="language-js">Keypad.prototype.LONGPRESS_INTERVAL=1000;
+Keypad.prototype.IDLE_INTERVAL=1000;
+</code></pre>
+<p>（VSCode可以按Ctrl+F查找）</p>
+<p>改为：</p>
+<pre><code class="language-js">Keypad.prototype.LONGPRESS_INTERVAL=500;
+Keypad.prototype.IDLE_INTERVAL=400;
+</code></pre>
+<p>4.在ADB命令行中执行</p>
+<pre><code class="language-bash">adb push keyboard.gaiamobile.org /data/local/webapps
+</code></pre>
+<p>5.使用下面的命令获得***webapps.json***</p>
+<pre><code>adb pull /data/local/webapps/webapps.json
+</code></pre>
+<p>6.打开ADB文件夹下的webapps.json</p>
+<p>找到这一行：</p>
+<pre><code>&quot;basePath&quot;: &quot;/system/b2g/webapps&quot;,
+</code></pre>
+<p>改成：</p>
+<pre><code>&quot;basePath&quot;: &quot;/data/local/webapps&quot;,
+</code></pre>
+<p>7.在ADB中逐行运行：</p>
+<pre><code>adb push webapps.json /data/local/webapps/
+</code></pre>
+<pre><code>adb reboot
+</code></pre>
+<p>8.重启后按键问题就会得到缓解</p>
+<p><strong>5~7步的作用：防止更改system而引起的翻车恢复不了，执行5~7步后，所有的更改将会在出厂设置后恢复，之前执行过的可以不执行5~7步</strong></p>
+<p><em><strong>————转自QQ old ice 的Kailab</strong></em></p>
 
             </div>
           </article>
@@ -180,9 +142,9 @@ $.ajax({
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://qqfloatingice.github.io//post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng">
+            <a href="https://qqfloatingice.github.io//post/kaios-bai-du-fan-yi-kai-fa-bi-ji">
               <h3 class="post-title">
-                让老旧平板焕发新生
+                kaios百度翻译开发笔记
               </h3>
             </a>
           </div>  

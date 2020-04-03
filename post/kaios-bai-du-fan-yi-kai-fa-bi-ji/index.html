@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>kaios百度翻译开发笔记 | QQ floating ice</title>
-<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1585879306311">
+<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1585879408369">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
 
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://qqfloatingice.github.io/">
-  <img class="avatar" src="https://qqfloatingice.github.io//images/avatar.png?v=1585879306311" alt="">
+  <img class="avatar" src="https://qqfloatingice.github.io//images/avatar.png?v=1585879408369" alt="">
   </a>
   <h1 class="site-title">
     QQ floating ice
@@ -105,60 +105,73 @@
 <p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
 <p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
 <p>这里给个参考代码</p>
-<p>&lt;!doctype html&gt;</p>
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <title>Translate</title>  
-</head>  
-<body>  
-<div id="SRC">  
-<textarea id="srcText" name="srcText " style="width:500px; height:120px;">  
-</textarea>  
-<p><button id="Click" name="Click">Translate</button></p>
-</div>  
-<br />   
-<hr />  
-<div id="DST">  
-<textarea id="dstText" name="dstText" style="width:500px; height:120px;">  
-</textarea>  
-</div>  
-</body>  
-<script src="jquery-1.8.2.min.js" type="text/javascript"></script>  
-<script type="text/javascript">  
-<p>$(&quot;#Click&quot;).click(function (){</p>
-<p>var contents = $(&quot;#srcText&quot;).val() ;<br>
-alert(  contents) ;</p>
-<p>$.ajax({<br>
-type:&quot;get&quot;,<br>
-async:false,                                                 //must be synchronized<br>
-url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,<br>
-dataType:&quot;jsonp&quot;,<br>
-data: {<br>
-from: &quot;翻译的源语言&quot;,                                              //language choose<br>
-to: &quot;翻译成的语言&quot;,<br>
-client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key<br>
-q: contents<br>
-},<br>
-success:function(json , status){</p>
-<pre><code>        //alert(&quot;here is the status :&quot;+status) ;  
-        $(&quot;#dstText&quot;).empty() ;  
+<pre><code>&lt;!doctype html&gt;  
+&lt;html lang=&quot;en&quot;&gt;  
+&lt;head&gt;  
+    &lt;meta charset=&quot;UTF-8&quot;&gt;  
+    &lt;title&gt;Translate&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;div id=&quot;SRC&quot;&gt;  
+&lt;textarea id=&quot;srcText&quot; name=&quot;srcText &quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+  
+&lt;button id=&quot;Click&quot; name=&quot;Click&quot;&gt;Translate&lt;/button&gt;  
+&lt;/div&gt;  
+  
+&lt;br /&gt;   
+&lt;hr /&gt;  
+&lt;div id=&quot;DST&quot;&gt;  
+&lt;textarea id=&quot;dstText&quot; name=&quot;dstText&quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+&lt;/div&gt;  
+  
+  
+&lt;/body&gt;  
+&lt;script src=&quot;jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
+&lt;script type=&quot;text/javascript&quot;&gt;  
+   
+$(&quot;#Click&quot;).click(function (){  
+  
+var contents = $(&quot;#srcText&quot;).val() ;  
+alert(  contents) ;  
+  
+  
+$.ajax({  
+       type:&quot;get&quot;,  
+       async:false,                                                 //must be synchronized  
+       url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,  
+       dataType:&quot;jsonp&quot;,  
+       data: {  
+           from: &quot;翻译的源语言&quot;,                                              //language choose  
+           to: &quot;翻译成的语言&quot;,  
+           client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key  
+           q: contents  
+       },     
+       success:function(json , status){  
+           
+            //alert(&quot;here is the status :&quot;+status) ;  
+            $(&quot;#dstText&quot;).empty() ;  
+  
+            for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
+            {  
+            $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
+            }  
+        //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
+           
+      },  
+      error:function(){  
+          alert('Fail to translate with baidu API!');  
+      }  
+});  
+}) ;  
+  
+&lt;/script&gt;  
+&lt;/html&gt;  
+	
+	
 
-        for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
-        {  
-        $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
-        }  
-    //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
-       
-  },  
-  error:function(){  
-      alert('Fail to translate with baidu API!');  
-  }  
 </code></pre>
-<p>});<br>
-}) ;</p>
-</script>  
-</html>  
 
             </div>
           </article>

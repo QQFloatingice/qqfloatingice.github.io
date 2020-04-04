@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【转】修复8110的按键速度 | QQ floating ice</title>
+<meta name="description" content="A personal blog for QQ floating ice">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1586000494467">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
+
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162752155-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162752155-1');
+</script>
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/qq-foating-ice/" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/dian-wo/" class="menu">
+                点我
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/you-qing-lian-jie/" class="menu">
+                友情链接
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>【转】修复8110的按键速度</h1>
+            <p class="article-meta">
+              2020-04-03
+              
+                <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
+                  kaios
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <h2 id="tags">tags:</h2>
+<p><strong>本教程来自Banana-Hackers论坛，由<em>Sylvain D</em>提供原教程，<em>Vivek</em>改进，KaiOSLab翻译。</strong></p>
+<p>8110的一个经典问题是打字速度太过诡异，这里是解决(缓解)这个问题的方法</p>
+<p>***注意***在做如下步骤前请root你的手机，软件<a href="https://www.heppy.wang/archives/47/">点此</a>，教程<a href="https://www.heppy.wang/archives/94/">点此</a>——来自清水博客</p>
+<p>1.从system获得键盘应用的复制</p>
+<pre><code>adb pull /system/b2g/webapps/keyboard.gaiamobile.org
+</code></pre>
+<p>​		<strong>注意！经过测试，win10或者其他不明原因，执行上面的命令后，adb文件夹下不会出现keyboard.gaiamobile.org文件夹，所以会导致之后的命令失败，可以按时间顺序筛选出pull下来的文件，将他们放在新建的keyboard.gaiamobile.org文件夹即可提示<a href="https://ufoalastor.github.io/QnL8BkKKv/">点此</a>来自——此店不售此书的博客。</strong></p>
+<p>2.打开application.zip   打开里面的/js/keypad.js（不要使用记事本，不需要解压）</p>
+<p>3.找到这一部分：</p>
+<pre><code class="language-js">Keypad.prototype.LONGPRESS_INTERVAL=1000;
+Keypad.prototype.IDLE_INTERVAL=1000;
+</code></pre>
+<p>（VSCode可以按Ctrl+F查找）</p>
+<p>改为：</p>
+<pre><code class="language-js">Keypad.prototype.LONGPRESS_INTERVAL=500;
+Keypad.prototype.IDLE_INTERVAL=400;
+</code></pre>
+<p>4.在ADB命令行中执行</p>
+<pre><code class="language-bash">adb push keyboard.gaiamobile.org /data/local/webapps
+</code></pre>
+<p>5.使用下面的命令获得***webapps.json***</p>
+<pre><code>adb pull /data/local/webapps/webapps.json
+</code></pre>
+<p>6.打开ADB文件夹下的webapps.json</p>
+<p>找到这一行：</p>
+<pre><code>&quot;basePath&quot;: &quot;/system/b2g/webapps&quot;,
+</code></pre>
+<p>改成：</p>
+<pre><code>&quot;basePath&quot;: &quot;/data/local/webapps&quot;,
+</code></pre>
+<p>7.在ADB中逐行运行：</p>
+<pre><code>adb push webapps.json /data/local/webapps/
+</code></pre>
+<pre><code>adb reboot
+</code></pre>
+<p>8.重启后按键问题就会得到缓解</p>
+<p><strong>5~7步的作用：防止更改system而引起的翻车恢复不了，执行5~7步后，所有的更改将会在出厂设置后恢复，之前执行过的可以不执行5~7步</strong></p>
+<p><em><strong>————转自QQ old ice 的<a href="https://www.kaioslab.xyz/">KaiOSlab</a></strong></em></p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/kaios-bai-du-fan-yi-kai-fa-bi-ji">
+                <h3 class="post-title">
+                  kaios百度翻译开发笔记
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://qqfloatingice.github.io//images/avatar.png?v=1586000494467" class="no-responsive avatar">
+    <div class="text-muted">A personal blog for QQ floating ice</div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/QQFloatingice" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://weibo.com/7381402429/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/dian-wo">点我</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/e-chou-xi-lie-8110-yu-fei-li-pu-e28969-yuan-dui-bi">【恶臭系列】8110与飞利浦E289（69元）对比</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/ubuntu-hua-ping-de-jie-jue-ban-fa">ubuntu花屏的解决办法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan">关于4代魔改无限拉倍频的一些杂谈</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/zhuan-xiu-fu-8110-de-an-jian-su-du">【转】修复8110的按键速度</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/kaios-bai-du-fan-yi-kai-fa-bi-ji">kaios百度翻译开发笔记</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng">让老旧平板焕发新生</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/shou-ci-shi-xian-ying-he-wu-sun-gai-zhuang-bi-ji-ben-zhi-chi-fu-wu-qi-u2-ying-pan">首次实现硬核无损改装笔记本支持服务器U.2硬盘</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/qq-foating-ice">QQ foating ice</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/you-qing-lian-jie">友情链接</a>
+            </li>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge success">
+          手机
+        </a>
+      
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge secondary">
+          测评
+        </a>
+      
+        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge secondary">
+          电脑
+        </a>
+      
+        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
+          kaios
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

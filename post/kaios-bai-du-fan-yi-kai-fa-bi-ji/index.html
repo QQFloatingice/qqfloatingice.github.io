@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>kaios百度翻译开发笔记 | QQ floating ice</title>
+<meta name="description" content="A personal blog for QQ floating ice">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1586000494467">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
+
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162752155-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162752155-1');
+</script>
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/qq-foating-ice/" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/dian-wo/" class="menu">
+                点我
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/you-qing-lian-jie/" class="menu">
+                友情链接
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>kaios百度翻译开发笔记</h1>
+            <p class="article-meta">
+              2020-04-03
+              
+                <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
+                  kaios
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <p>有于本人英语特别渣，所以特别需要一个翻译来解决问题，又因为最近的网课可以摸鱼，所以在kaios开发了给简陋的翻译0.0.1（目前更新一直鸽着）。。。。</p>
+<p>所以有人看到这个贴子的话（我知道这个小破站基本没人来。。。）请把它进行改进</p>
+<p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
+<p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
+<p>这里给个参考代码</p>
+<pre><code>&lt;!doctype html&gt;  
+&lt;html lang=&quot;en&quot;&gt;  
+&lt;head&gt;  
+    &lt;meta charset=&quot;UTF-8&quot;&gt;  
+    &lt;title&gt;Translate&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;div id=&quot;SRC&quot;&gt;  
+&lt;textarea id=&quot;srcText&quot; name=&quot;srcText &quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+  
+&lt;button id=&quot;Click&quot; name=&quot;Click&quot;&gt;Translate&lt;/button&gt;  
+&lt;/div&gt;  
+  
+&lt;br /&gt;   
+&lt;hr /&gt;  
+&lt;div id=&quot;DST&quot;&gt;  
+&lt;textarea id=&quot;dstText&quot; name=&quot;dstText&quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+&lt;/div&gt;  
+  
+  
+&lt;/body&gt;  
+&lt;script src=&quot;jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
+&lt;script type=&quot;text/javascript&quot;&gt;  
+   
+$(&quot;#Click&quot;).click(function (){  
+  
+var contents = $(&quot;#srcText&quot;).val() ;  
+alert(  contents) ;  
+  
+  
+$.ajax({  
+       type:&quot;get&quot;,  
+       async:false,                                                 //must be synchronized  
+       url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,  
+       dataType:&quot;jsonp&quot;,  
+       data: {  
+           from: &quot;翻译的源语言&quot;,                                              //language choose  
+           to: &quot;翻译成的语言&quot;,  
+           client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key  
+           q: contents  
+       },     
+       success:function(json , status){  
+           
+            //alert(&quot;here is the status :&quot;+status) ;  
+            $(&quot;#dstText&quot;).empty() ;  
+  
+            for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
+            {  
+            $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
+            }  
+        //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
+           
+      },  
+      error:function(){  
+          alert('Fail to translate with baidu API!');  
+      }  
+});  
+}) ;  
+  
+&lt;/script&gt;  
+&lt;/html&gt;  
+	
+	
+
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng">
+                <h3 class="post-title">
+                  让老旧平板焕发新生
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://qqfloatingice.github.io//images/avatar.png?v=1586000494467" class="no-responsive avatar">
+    <div class="text-muted">A personal blog for QQ floating ice</div>
+    <div class="social-container">
+      
+        
+          <a href="https://github.com/QQFloatingice" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://weibo.com/7381402429/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/dian-wo">点我</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/e-chou-xi-lie-8110-yu-fei-li-pu-e28969-yuan-dui-bi">【恶臭系列】8110与飞利浦E289（69元）对比</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/ubuntu-hua-ping-de-jie-jue-ban-fa">ubuntu花屏的解决办法</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan">关于4代魔改无限拉倍频的一些杂谈</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/zhuan-xiu-fu-8110-de-an-jian-su-du">【转】修复8110的按键速度</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/kaios-bai-du-fan-yi-kai-fa-bi-ji">kaios百度翻译开发笔记</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng">让老旧平板焕发新生</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/shou-ci-shi-xian-ying-he-wu-sun-gai-zhuang-bi-ji-ben-zhi-chi-fu-wu-qi-u2-ying-pan">首次实现硬核无损改装笔记本支持服务器U.2硬盘</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/qq-foating-ice">QQ foating ice</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://qqfloatingice.github.io//post/you-qing-lian-jie">友情链接</a>
+            </li>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge success">
+          手机
+        </a>
+      
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge success">
+          测评
+        </a>
+      
+        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge success">
+          电脑
+        </a>
+      
+        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge ">
+          kaios
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>

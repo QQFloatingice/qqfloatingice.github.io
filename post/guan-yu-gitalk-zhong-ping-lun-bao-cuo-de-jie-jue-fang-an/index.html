@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>测评 | QQ floating ice</title>
+<title>关于gitalk中评论报错的解决方案 | QQ floating ice</title>
 <meta name="description" content="A personal blog for QQ floating ice">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
@@ -31,6 +37,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
@@ -103,72 +110,55 @@
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
-          <h2 class="current-tag">标签: 测评</h2>
-          
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/e-chou-xi-lie-8110-yu-fei-li-pu-e28969-yuan-dui-bi">【恶臭系列】8110与飞利浦E289（69元）对比</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-04
-      
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge secondary">
-          手机
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge warning">
-          测评
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/e-chou-xi-lie-8110-yu-fei-li-pu-e28969-yuan-dui-bi" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
+          <article class="article">
+            <h1>关于gitalk中评论报错的解决方案</h1>
+            <p class="article-meta">
+              2020-04-05
+              
+                <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
+                  Gridea
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <p>首先，找到这个文件夹</p>
+<pre><code>C:\Users\你电脑的用户名\Documents\Gridea\themes\你正在使用的主题\templates\_blocks}
+</code></pre>
+<p>打开scripts.EJS将ID ： 这一行改为</p>
+<pre><code>id: decodeURI(&quot;{{ page.url }}&quot;), // Ensure uniqueness and length less than 50
+</code></pre>
+<p>保存即可</p>
+<p>但是这又引起了新的bug。。。。每篇文章都共用一个评论区。。。</p>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/er-nai-ji-thinkpad-e490-de-jian-yao-ce-ping">二奶机 thinkpad E490的简要测评</a>
-    </h2>
-    <p class="article-meta">
-      2019-11-20
-      
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge ">
-          测评
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge ">
-          电脑
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/er-nai-ji-thinkpad-e490-de-jian-yao-ce-ping" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            </div>
+          </article>
         </div>
-        <div class="row flex-edges">
-  
-  
-</div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/e-chou-xi-lie-8110-yu-fei-li-pu-e28969-yuan-dui-bi">
+                <h3 class="post-title">
+                  【恶臭系列】8110与飞利浦E289（69元）对比
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
 
+          
+        
       </div>
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://qqfloatingice.github.io//images/avatar.png?v=1586050380847" class="no-responsive avatar">
@@ -277,23 +267,23 @@
     </div>
     <div class="row">
       
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge warning">
           Gridea
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge secondary">
           手机
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge success">
           测评
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge success">
           电脑
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge secondary">
           kaios
         </a>
       
@@ -303,6 +293,7 @@
     Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
   </div>
 </div>
+
 
     </div>
 
@@ -315,6 +306,29 @@ AOS.init();
 hljs.initHighlightingOnLoad()
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '31471fd270e786b8e28a',
+        clientSecret: '56ff07ecd1e44a84573f4ccf37c097def08b5c0b',
+        repo: 'qqfloatingice.github.io',
+        owner: 'qqfloatingice',
+        admin: ['qqfloatingice'],
+        id: decodeURI("{{ page.url }}"),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

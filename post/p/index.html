@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" >
 
-<title>QQ foating ice | QQ floating ice</title>
+<title>kaios百度翻译开发笔记 | QQ floating ice</title>
 <meta name="description" content="A personal blog for QQ floating ice">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1586089315228">
+<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1586089906638">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
@@ -80,7 +80,7 @@
         
           <li>
             
-              <a href="/post/qq-foating-ice/" class="menu">
+              <a href="/post/2" class="menu">
                 关于
               </a>
             
@@ -88,7 +88,7 @@
         
           <li>
             
-              <a href="/post/dian-wo/" class="menu">
+              <a href="/post/3" class="menu">
                 点我
               </a>
             
@@ -96,7 +96,7 @@
         
           <li>
             
-              <a href="/post/you-qing-lian-jie/" class="menu">
+              <a href="/post/1" class="menu">
                 友情链接
               </a>
             
@@ -111,24 +111,105 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>QQ foating ice</h1>
+            <h1>kaios百度翻译开发笔记</h1>
             <p class="article-meta">
-              2020-04-02
+              2020-04-03
+              
+                <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge secondary">
+                  kaios
+                </a>
               
             </p>
             
             <div class="post-content">
-              <p>QQ floating ice，苦逼初三党，硬核女装大佬，网站搬运工，业余超频玩家，成绩自我感觉还行，C++竞赛退役队员，中考目标是省一级重高。不说了，自己看图，我要去写作业了╮(╯-╰)╭
-<img src="http://tiebapic.baidu.com/forum/w%3D580/sign=e81c885f274e251fe2f7e4f09786c9c2/7636e423720e0cf37ee2649e1d46f21fbe09aa20.jpg" alt="">
-<img src="http://tiebapic.baidu.com/forum/w%3D580/sign=97d29ddeb11ea8d38a22740ca70a30cf/8b46334b20a44623addf8f078f22720e0cf3d720.jpg" alt=""><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=9b663a4a82cad1c8d0bbfc2f4f3e67c4/946a70f2d7ca7bcba16eed4aa9096b63f624a820.jpg" alt="">
-<img src="http://tiebapic.baidu.com/forum/w%3D580/sign=03d5e3568545d688a302b2ac94c27dab/d2ff7f3a5bb5c9ead5e62986c239b6003af3b320.jpg" alt=""><img src="http://tiebapic.baidu.com/forum/w%3D580/sign=662a45fab30f4bfb8cd09e5c334f788f/45a800d88d1001e9dd293e6aaf0e7bec54e79720.jpg" alt=""></p>
-<p>随机图</p>
-<p><img src="https://s0.xinger.ink/acgimg/acgurl.php" alt="ACG"></p>
+              <p>有于本人英语特别渣，所以特别需要一个翻译来解决问题，又因为最近的网课可以摸鱼，所以在kaios开发了给简陋的翻译0.0.1（目前更新一直鸽着）。。。。</p>
+<p>所以有人看到这个贴子的话（我知道这个小破站基本没人来。。。）请把它进行改进</p>
+<p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
+<p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
+<p>这里给个参考代码</p>
+<pre><code>&lt;!doctype html&gt;  
+&lt;html lang=&quot;en&quot;&gt;  
+&lt;head&gt;  
+    &lt;meta charset=&quot;UTF-8&quot;&gt;  
+    &lt;title&gt;Translate&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;div id=&quot;SRC&quot;&gt;  
+&lt;textarea id=&quot;srcText&quot; name=&quot;srcText &quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+  
+&lt;button id=&quot;Click&quot; name=&quot;Click&quot;&gt;Translate&lt;/button&gt;  
+&lt;/div&gt;  
+  
+&lt;br /&gt;   
+&lt;hr /&gt;  
+&lt;div id=&quot;DST&quot;&gt;  
+&lt;textarea id=&quot;dstText&quot; name=&quot;dstText&quot; style=&quot;width:500px; height:120px;&quot;&gt;  
+&lt;/textarea&gt;  
+&lt;/div&gt;  
+  
+  
+&lt;/body&gt;  
+&lt;script src=&quot;jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
+&lt;script type=&quot;text/javascript&quot;&gt;  
+   
+$(&quot;#Click&quot;).click(function (){  
+  
+var contents = $(&quot;#srcText&quot;).val() ;  
+alert(  contents) ;  
+  
+  
+$.ajax({  
+       type:&quot;get&quot;,  
+       async:false,                                                 //must be synchronized  
+       url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,  
+       dataType:&quot;jsonp&quot;,  
+       data: {  
+           from: &quot;翻译的源语言&quot;,                                              //language choose  
+           to: &quot;翻译成的语言&quot;,  
+           client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key  
+           q: contents  
+       },     
+       success:function(json , status){  
+           
+            //alert(&quot;here is the status :&quot;+status) ;  
+            $(&quot;#dstText&quot;).empty() ;  
+  
+            for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
+            {  
+            $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
+            }  
+        //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
+           
+      },  
+      error:function(){  
+          alert('Fail to translate with baidu API!');  
+      }  
+});  
+}) ;  
+  
+&lt;/script&gt;  
+&lt;/html&gt;  
+	
+	
+
+</code></pre>
 
             </div>
           </article>
         </div>
         <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/q">
+                <h3 class="post-title">
+                  让老旧平板焕发新生
+                </h3>
+              </a>
+            </div>
           
         </div>
         
@@ -144,7 +225,7 @@
 
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
-    <img src="https://qqfloatingice.github.io//images/avatar.png?v=1586089315228" class="no-responsive avatar">
+    <img src="https://qqfloatingice.github.io//images/avatar.png?v=1586089906638" class="no-responsive avatar">
     <div class="text-muted">A personal blog for QQ floating ice</div>
     <div class="social-container">
       
@@ -177,61 +258,61 @@
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/zhuan-wan-zhuan-ni-de-kaios-shou-ji-ji-chu-pian-nokia-8110-4g-pian">【转】玩转你的 KaiOS 手机 【基础篇】 - Nokia 8110 4G 篇</a>
+              <a href="https://qqfloatingice.github.io//post/a">【转】玩转你的 KaiOS 手机 【基础篇】 - Nokia 8110 4G 篇</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/guan-yu-gitalk-zhong-ping-lun-bao-cuo-de-jie-jue-fang-an">关于gitalk中评论报错的解决方案</a>
+              <a href="https://qqfloatingice.github.io//post/b">关于gitalk中评论报错的解决方案</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/dian-wo">点我</a>
+              <a href="https://qqfloatingice.github.io//post/3">点我</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/e-chou-xi-lie-8110-yu-fei-li-pu-e28969-yuan-dui-bi">【恶臭系列】8110与飞利浦E289（69元）对比</a>
+              <a href="https://qqfloatingice.github.io//post/c">【恶臭系列】8110与飞利浦E289（69元）对比</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/ubuntu-hua-ping-de-jie-jue-ban-fa">ubuntu花屏的解决办法</a>
+              <a href="https://qqfloatingice.github.io//post/d">ubuntu花屏的解决办法</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan">关于4代魔改无限拉倍频的一些杂谈</a>
+              <a href="https://qqfloatingice.github.io//post/e">关于4代魔改无限拉倍频的一些杂谈</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/zhuan-xiu-fu-8110-de-an-jian-su-du">【转】修复8110的按键速度</a>
+              <a href="https://qqfloatingice.github.io//post/f">【转】修复8110的按键速度</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/kaios-bai-du-fan-yi-kai-fa-bi-ji">kaios百度翻译开发笔记</a>
+              <a href="https://qqfloatingice.github.io//post/p">kaios百度翻译开发笔记</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/rang-lao-jiu-ping-ban-huan-fa-xin-sheng">让老旧平板焕发新生</a>
+              <a href="https://qqfloatingice.github.io//post/q">让老旧平板焕发新生</a>
             </li>
           
         
           
             <li>
-              <a href="https://qqfloatingice.github.io//post/shou-ci-shi-xian-ying-he-wu-sun-gai-zhuang-bi-ji-ben-zhi-chi-fu-wu-qi-u2-ying-pan">首次实现硬核无损改装笔记本支持服务器U.2硬盘</a>
+              <a href="https://qqfloatingice.github.io//post/k">首次实现硬核无损改装笔记本支持服务器U.2硬盘</a>
             </li>
           
         
@@ -252,7 +333,7 @@
     </div>
     <div class="row">
       
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge warning">
           手机
         </a>
       
@@ -264,11 +345,11 @@
           Gridea
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge ">
           测评
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge ">
           电脑
         </a>
       
@@ -304,7 +385,7 @@ hljs.initHighlightingOnLoad()
         repo: 'qqfloatingice.github.io',
         owner: 'qqfloatingice',
         admin: ['qqfloatingice'],
-        id: 'indow.location.pathname',      // Ensure uniqueness and length less than 50
+        id: location.pathname,      // Ensure uniqueness and length less than 50
         distractionFreeMode: false  // Facebook-like distraction free mode
       })
 

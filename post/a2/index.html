@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>kaios百度翻译开发笔记 | QQ floating ice</title>
+<title>氵 | QQ floating ice</title>
 <meta name="description" content="A personal blog for QQ floating ice">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -105,89 +105,202 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>kaios百度翻译开发笔记</h1>
+            <h1>氵</h1>
             <p class="article-meta">
-              2020-04-03
+              2020-04-07
               
-                <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge success">
-                  kaios
+                <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge warning">
+                  氵
                 </a>
               
             </p>
             
             <div class="post-content">
-              <p>有于本人英语特别渣，所以特别需要一个翻译来解决问题，又因为最近的网课可以摸鱼，所以在kaios开发了给简陋的翻译0.0.1（目前更新一直鸽着）。。。。</p>
-<p>所以有人看到这个贴子的话（我知道这个小破站基本没人来。。。）请把它进行改进</p>
-<p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
-<p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
-<p>这里给个参考代码</p>
-<pre><code>&lt;!doctype html&gt;  
-&lt;html lang=&quot;en&quot;&gt;  
-&lt;head&gt;  
-    &lt;meta charset=&quot;UTF-8&quot;&gt;  
-    &lt;title&gt;Translate&lt;/title&gt;  
-&lt;/head&gt;  
-&lt;body&gt;  
-&lt;div id=&quot;SRC&quot;&gt;  
-&lt;textarea id=&quot;srcText&quot; name=&quot;srcText &quot; style=&quot;width:500px; height:120px;&quot;&gt;  
-&lt;/textarea&gt;  
-  
-&lt;button id=&quot;Click&quot; name=&quot;Click&quot;&gt;Translate&lt;/button&gt;  
-&lt;/div&gt;  
-  
-&lt;br /&gt;   
-&lt;hr /&gt;  
-&lt;div id=&quot;DST&quot;&gt;  
-&lt;textarea id=&quot;dstText&quot; name=&quot;dstText&quot; style=&quot;width:500px; height:120px;&quot;&gt;  
-&lt;/textarea&gt;  
-&lt;/div&gt;  
-  
-  
-&lt;/body&gt;  
-&lt;script src=&quot;jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
-&lt;script type=&quot;text/javascript&quot;&gt;  
-   
-$(&quot;#Click&quot;).click(function (){  
-  
-var contents = $(&quot;#srcText&quot;).val() ;  
-alert(  contents) ;  
-  
-  
-$.ajax({  
-       type:&quot;get&quot;,  
-       async:false,                                                 //must be synchronized  
-       url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,  
-       dataType:&quot;jsonp&quot;,  
-       data: {  
-           from: &quot;翻译的源语言&quot;,                                              //language choose  
-           to: &quot;翻译成的语言&quot;,  
-           client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key  
-           q: contents  
-       },     
-       success:function(json , status){  
-           
-            //alert(&quot;here is the status :&quot;+status) ;  
-            $(&quot;#dstText&quot;).empty() ;  
-  
-            for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
-            {  
-            $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
-            }  
-        //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
-           
-      },  
-      error:function(){  
-          alert('Fail to translate with baidu API!');  
-      }  
-});  
-}) ;  
-  
-&lt;/script&gt;  
-&lt;/html&gt;  
-	
-	
+              <h1 id="emmmm没东西好水了写个游戏你们玩吧">emmmm没东西好水了，写个游戏你们玩吧</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>别踩白块</title>
+    <style type="text/css">
+        #score{
+            text-align: center;}
+<pre><code>    h2 {
+        text-align: center;    }
 
+    div{
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;}
+
+    #main {
+        width: 400px;
+        height: 400px;
+        background: white;
+        border: 2px solid gray;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;}
+
+    #con {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        top: -100px;
+        border-collapse:collapse;}
+
+    .row{
+        height: 100px;
+        width: 100%;}
+
+    .cell{
+        height: 100px;
+        width: 100px;
+        float: left;}
+
+    .black {
+        background: black;}
+&lt;/style&gt;
 </code></pre>
+</head>
+<body>
+<pre><code>&lt;h2&gt;score&lt;/h2&gt;
+&lt;h2 id=&quot;score&quot;&gt;0&lt;/h2&gt;
+&lt;div id=&quot;main&quot;&gt;
+    &lt;div id=&quot;con&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</body>
+<script>
+    var clock = null;
+    var state = 0;
+    var speed = 4;
+<pre><code>    /*
+    *    初始化 init
+    */
+    function init(){
+        for(var i=0; i&lt;4; i++){
+            createrow();
+        }
+
+        // 添加onclick事件
+        $('main').onclick = function(ev){
+            judge(ev);
+        }
+
+        // 定时器 每30毫秒调用一次move()
+            clock = window.setInterval('move()', 30);
+    }
+
+    // 判断是否点击黑块
+    function judge(ev){
+        if (ev.target.className.indexOf('black') != -1) {
+            ev.target.className = 'cell';
+            ev.target.parentNode.pass = 1; //定义属性pass，表明此行row的黑块已经被点击
+            score();
+        }
+    }
+
+    // 游戏结束
+    function fail(){
+        clearInterval(clock);
+        confirm('你的最终得分为 ' + parseInt($('score').innerHTML) );
+    }
+
+    // 创建div, className是其类名
+    function creatediv(className){
+        var div = document.createElement('div');
+        div.className = className;
+        return div;
+    }
+
+    // 创造一个&lt;div class=&quot;row&quot;&gt;并且有四个子节点&lt;div class=&quot;cell&quot;&gt;
+    function createrow(){
+        var con = $('con');
+        var row = creatediv('row'); //创建div className=row
+        var arr = creatcell(); //定义div cell的类名,其中一个为cell black
+
+        con.appendChild(row); // 添加row为con的子节点
+
+        for(var i = 0; i &lt; 4; i++){
+            row.appendChild(creatediv(arr[i])); //添加row的子节点 cell
+        }
+
+        if(con.firstChild == null){
+            con.appendChild(row);
+        }else{
+            con.insertBefore(row, con.firstChild);
+        }
+    }
+
+    // 根据id来get DOM元素
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    // 创建一个类名的数组，其中一个为cell black, 其余为cell
+    function creatcell(){
+        var temp = ['cell', 'cell', 'cell', 'cell',];
+        var i = Math.floor(Math.random()*4);
+        temp[i] = 'cell black';
+        return temp;
+    }
+
+    //让黑块动起来
+    function move(){
+        var con = $('con');
+        var top = parseInt(window.getComputedStyle(con, null)['top']);
+
+        if(speed + top &gt; 0){
+            top = 0;
+        }else{
+            top += speed;
+        }            
+        con.style.top = top + 'px';
+
+        if(top == 0){
+            createrow();
+            con.style.top = '-100px';
+            delrow();
+        }else if(top == (-100 + speed)){
+            var rows = con.childNodes;
+            if((rows.length == 5) &amp;&amp; (rows[rows.length-1].pass !== 1) ){
+                fail();
+            }
+        }
+    }
+
+    // 加速函数
+    function speedup(){
+        speed += 2;
+        if(speed == 20){
+            alert('你超神了');
+        }
+    }
+
+    //删除某行
+    function delrow(){
+        var con = $('con');
+        if(con.childNodes.length == 6) {
+               con.removeChild(con.lastChild);
+           }
+    }    
+
+    // 记分
+    function score(){
+        var newscore = parseInt($('score').innerHTML) + 1;
+        $('score').innerHTML = newscore;
+        if(newscore % 10 == 0){
+            speedup();
+        }
+    }
+
+init();
+</code></pre>
+</script>
+</html><style>
+<p></style></head><body><script></p>
+<p></script></body></html></p>
 
             </div>
           </article>
@@ -198,9 +311,9 @@ $.ajax({
               <div class="next">
                 下一篇
               </div>
-              <a href="https://qqfloatingice.github.io//post/q">
+              <a href="https://qqfloatingice.github.io//post/a1">
                 <h3 class="post-title">
-                  让老旧平板焕发新生
+                  如何格式化损坏的TF卡
                 </h3>
               </a>
             </div>
@@ -335,7 +448,7 @@ $.ajax({
           手机
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
           kaios
         </a>
       
@@ -343,7 +456,7 @@ $.ajax({
           Gridea
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge warning">
           测评
         </a>
       

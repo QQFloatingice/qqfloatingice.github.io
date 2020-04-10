@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | QQ floating ice</title>
+<title>关于gitalk中评论报错的解决方案 | QQ floating ice</title>
 <meta name="description" content="A personal blog for QQ floating ice
 
 &lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=425137440&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;">
@@ -33,6 +33,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
@@ -105,40 +106,47 @@
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/b">关于gitalk中评论报错的解决方案</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-05
-      
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
-          Gridea
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/b" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
+          <article class="article">
+            <h1>关于gitalk中评论报错的解决方案</h1>
+            <p class="article-meta">
+              2020-04-05
+              
+                <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge success">
+                  Gridea
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <p>首先，找到这个文件夹</p>
+<pre><code>C:\Users\你电脑的用户名\Documents\Gridea\themes\你正在使用的主题\templates\_blocks}
+</code></pre>
+<p>打开scripts.EJS将ID ： 这一行改为</p>
+<pre><code>id: decodeURI(&quot;{{ page.url }}&quot;), // Ensure uniqueness and length less than 50
+</code></pre>
+<p>保存即可</p>
+<p>但是这又引起了新的bug。。。。每篇文章都共用一个评论区。。。</p>
 
-
+            </div>
+          </article>
         </div>
-        <div class="row flex-edges">
-  
-  
-</div>
-
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/c">
+                <h3 class="post-title">
+                  【恶臭系列】8110与飞利浦E289（69元）对比
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://qqfloatingice.github.io//images/avatar.png?v=1586518336713" class="no-responsive avatar">
@@ -261,27 +269,27 @@
     </div>
     <div class="row">
       
-        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge ">
           氵
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge success">
           电脑
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge success">
           手机
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge success">
           kaios
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge ">
           Gridea
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge secondary">
           测评
         </a>
       
@@ -328,7 +336,11 @@ show_date_time()
   </div>
 </div>
 
+
     </div>
+
+
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -343,5 +355,10 @@ hljs.initHighlightingOnLoad()
 
 
 
+	
+	
+	
+	
   </body>
+  
 </html>

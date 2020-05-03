@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>让老旧平板焕发新生 | QQ floating ice</title>
+<title>计算用杨辉三角 | QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -154,23 +154,62 @@ show_date_time()
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>让老旧平板焕发新生</h1>
+            <h1>计算用杨辉三角</h1>
             <p class="article-meta">
-              2020-04-02
+              2020-05-03
               
-                <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge ">
-                  电脑
+                <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge secondary">
+                  C++
                 </a>
               
             </p>
             
             <div class="post-content">
-              <p>由于本人苦逼经常更换住址，所以发现原先的第二显示屏不便于携带使用。</p>
-<p><img src="https://i.loli.net/2020/04/07/OEwJ1Aztr7MjKgd.jpg" alt=""></p>
-<p>所以迫切的需要一台便携的第二屏配合虚拟机使用，然而又因为快递还没恢复，于是我便把邪恶的目光看向了久经沙场的ipad4，我目前的方案是，在虚拟机上安装某远控软件现在成品是这样的。</p>
-<p><img src="https://i.loli.net/2020/04/07/YhzSbRMnZTu4qa5.jpg" alt=""></p>
-<p>p.s.E490是真的弱鸡，虚拟机只能带一个</p>
-<p>随着一段时间的使用，目前我的体验是这样的，最好配合鼠标，键盘使用。虽然可以触控但是体验不是很好，并且建议轻度使用。要生产力的话，强烈推荐键盘鼠标。</p>
+              <h3 id="声明">声明</h3>
+<h4 id="由于本人c使用能力一直下滑毕竟知道它没用-不考竞赛之后就没认真用过了所以有bug不要找我我现在已经没有能力修他们了">由于本人C++使用能力一直下滑（毕竟知道它没用-不考竞赛之后就没认真用过了）所以有BUG不要找我，我现在已经没有能力修他们了。。。。</h4>
+<h5 id="本人的c版本较早可能新版无法运行">本人的C++版本较早可能新版无法运行</h5>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+//返回杨辉三角第x行第y列的值，起始行为第0行
+int SanJiaoYang(int x,int y);
+int main()
+{
+int RowCount,i,j,k;
+cout &lt;&lt; &quot;请输入杨辉三角的行数:&quot;;
+while(cin &gt;&gt; RowCount)
+{
+for(i = 0;i &lt; RowCount;++i)
+{
+for(j = 1;j &lt; RowCount - i;++j)//打印第i行第一个元素前面的空格
+{
+cout &lt;&lt; &quot; &quot;;
+}
+for(k = 1;k &lt;= i + 1;++k)//打印第i行的所有元素
+{
+cout &lt;&lt; SanJiaoYang(i,k) &lt;&lt; &quot; &quot;;
+}
+cout &lt;&lt; endl;
+}
+cout &lt;&lt; &quot;请输入杨辉三角的行数:&quot;;
+}
+return 0;
+}
+//返回杨辉三角第x行第y列的值，起始行为第0行
+int SanJiaoYang(int x,int y)
+{
+int z;
+if((y == 1) || (y == x + 1))
+{
+z = 1;
+}
+else//y!=1且y!=x
+{
+z = SanJiaoYang(x - 1,y - 1) + SanJiaoYang(x - 1,y);
+}
+return z;
+}
+
+</code></pre>
 
             </div>
           </article>
@@ -181,9 +220,9 @@ show_date_time()
               <div class="next">
                 下一篇
               </div>
-              <a href="https://qqfloatingice.github.io//post/k">
+              <a href="https://qqfloatingice.github.io//post/c0">
                 <h3 class="post-title">
-                  首次实现硬核无损改装笔记本支持服务器U.2硬盘
+                  CPU测试用杨辉三角
                 </h3>
               </a>
             </div>
@@ -386,15 +425,15 @@ show_date_time()
     </div>
     <div class="row">
       
-        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge ">
           C++
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge secondary">
           软件推荐
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge warning">
           电脑
         </a>
       
@@ -414,7 +453,7 @@ show_date_time()
           氵
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge ">
           Gridea
         </a>
       

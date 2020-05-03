@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>QQ floating ice</title>
+<title>CPU测试用杨辉三角 | QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -73,8 +73,14 @@ show_date_time()
 </script>
 
 
+	<link rel="stylesheet" type="text/css" href="/styles/railscasts.css">
+    <link rel="stylesheet" href="/styles/default.css">
+    <script src="/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+	
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
@@ -144,208 +150,99 @@ show_date_time()
   </div>
 </nav>
 
-
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
+          <article class="article">
+            <h1>CPU测试用杨辉三角</h1>
+            <p class="article-meta">
+              2020-05-03
+              
+                <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge secondary">
+                  C++
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <h3 id="声明">声明</h3>
+<h4 id="由于本人c使用能力一直下滑毕竟知道它没用-不考竞赛之后就没认真用过了所以有bug不要找我我现在已经没有能力修他们了">由于本人C++使用能力一直下滑（毕竟知道它没用-不考竞赛之后就没认真用过了）所以有BUG不要找我，我现在已经没有能力修他们了。。。。</h4>
+<h5 id="本人的c版本较早可能新版无法运行">本人的C++版本较早可能新版无法运行</h5>
+<pre><code>#include&lt;iostream&gt;  
+#include&lt;iomanip&gt;  
+using namespace std;  
+int* YangHuiData(int n); //n是杨辉三角形的行数   
+void YangHuiShow(int *pData, int n);//在屏幕上打印杨辉三角形   
+int main() {  
+    int n;  
+    cout &lt;&lt; &quot;请输入杨辉三角形的行数&quot;;  
+    cin &gt;&gt; n;  
+    //计算杨辉三角并保存到二维数组  
+    int *pData = YangHuiData(n);  
+    //在屏幕上打印等腰三角形的杨辉三角   
+    YangHuiShow(pData, n);  
+    //n是杨辉三角形的行数   
+}  
+  
+int* YangHuiData(int n) {  
+    int *a = new int[n*n];  
+    //完成杨辉三角形的计算，没有显示的位置填0   
+    int i, j;  
+    for (i = 0; i&lt;n*n; i++) {  
+        a[i] = 0;  
+    }  
+  
+    a[0] = 1;  
+    a[n] = 1;  
+    a[n + 1] = 1;  
+  
+    for (i = 2; i&lt;n; i++) {  
+        a[i*n] = 1;  
+        a[i*n + i] = 1;  
+        for (j = 1; j&lt;i; j++) {  
+            a[i*n + j] = a[(i - 1)*n + j - 1] + a[(i - 1)*n + j];  
+        }  
+    }  
+  
+    return a;  
+}  
+void YangHuiShow(int *a, int n) {  
+    //根据数据a指向的二维数组在屏幕上打印   
+    //杨辉三角形，每行前面填充合适的空格   
+    //以显示成等腰三角形，左右对称   
+    int i, j;  
+    for (i = 0; i&lt;n; i++)  
+    {  
+        for (j = 0; j&lt;n - i - 1; j++)  
+            cout &lt;&lt; setw(3) &lt;&lt; &quot; &quot;;//前导空格，为单个数据的一半宽度    
+        for (j = 0; j &lt;= i; j++)  
+            cout &lt;&lt; setw(6) &lt;&lt; a[i*n + j];  
+        cout &lt;&lt; endl;  
+    }  
+}  
+
+</code></pre>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
           
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/b1">【挖坟】卡片电脑挑战PC游戏</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-09
-      
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge secondary">
-          电脑
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <p>发表时间2015-12-17 21:05</p>
-<p>原发表在我已经炸了的个人博客qqfloatingice.com</p>
-
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/b1" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/a2">水</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-07
-      
-        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge secondary">
-          氵
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/a2" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/a1">如何格式化损坏的TF卡</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-06
-      
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge secondary">
-          电脑
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/a1" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/a">【转】玩转你的 KaiOS 手机 【基础篇】 - Nokia 8110 4G 篇</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-05
-      
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge secondary">
-          手机
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge success">
-          kaios
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      <p>来自KaiIce的@失去时间の魔王 （部份内容来自清水博客）</p>
-
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/a" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/b">关于gitalk中评论报错的解决方案</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-05
-      
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
-          Gridea
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/b" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/c">【恶臭系列】8110与飞利浦E289（69元）对比</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-04
-      
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge warning">
-          手机
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge warning">
-          测评
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/c" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/d">ubuntu花屏的解决办法</a>
-    </h2>
-    <p class="article-meta">
-      2020-04-04
-      
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge warning">
-          电脑
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/d" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/c1">
+                <h3 class="post-title">
+                  C++打飞机小游戏
+                </h3>
+              </a>
+            </div>
+          
         </div>
         
-        <div class="row flex-edges">
-  
-    <a href="https://qqfloatingice.github.io//page/2/" class="paper-btn">
-      上一页
-    </a>
-  
-  
-    <a href="https://qqfloatingice.github.io//page/4/" class="paper-btn">
-      下一页
-    </a>
-  
-</div>
-
       </div>
-      
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://qqfloatingice.github.io//images/avatar.png?v=1588506081716" class="no-responsive avatar">
@@ -523,6 +420,12 @@ show_date_time()
         
           
         
+          
+        
+          
+        
+          
+        
       </ul>
     </div>
   </div>
@@ -532,11 +435,11 @@ show_date_time()
     </div>
     <div class="row">
       
-        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge warning">
           C++
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge secondary">
           软件推荐
         </a>
       
@@ -544,7 +447,7 @@ show_date_time()
           电脑
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge ">
           手机
         </a>
       
@@ -552,15 +455,15 @@ show_date_time()
           测评
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge success">
           kaios
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge success">
           氵
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge warning">
           Gridea
         </a>
       
@@ -586,7 +489,12 @@ show_date_time()
   </div>
 </div>
 
+
     </div>
+
+
+
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
@@ -600,7 +508,10 @@ hljs.initHighlightingOnLoad()
 
 
 
+	
+	
+	
+	
   </body>
-  <script src="./media/live2d/autoload.js"></script>
   
 </html>

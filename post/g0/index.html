@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | QQ floating ice</title>
+<title>初学golang实现杨辉三角 | QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -73,8 +73,14 @@ show_date_time()
 </script>
 
 
+	<link rel="stylesheet" type="text/css" href="/styles/railscasts.css">
+    <link rel="stylesheet" href="/styles/default.css">
+    <script src="/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+	
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
@@ -147,48 +153,72 @@ show_date_time()
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="row tags-container">
+          <article class="article">
+            <h1>初学golang实现杨辉三角</h1>
+            <p class="article-meta">
+              2020-05-16
+              
+                <a href="https://qqfloatingice.github.io//tag/AiYLawc_Y" class="badge secondary">
+                  golang
+                </a>
+              
+            </p>
             
-              <a href="https://qqfloatingice.github.io//tag/AiYLawc_Y" class="badge ">
-                golang
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
-                kaios
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge secondary">
-                电脑
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge secondary">
-                C++
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge secondary">
-                软件推荐
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge ">
-                手机
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge success">
-                测评
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge secondary">
-                氵
-              </a>
-            
-              <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge warning">
-                Gridea
-              </a>
-            
-          </div>
+            <div class="post-content">
+              <p>。。。</p>
+<p>为了维护光荣传统，我要把第二个go程序写成杨辉三角。。。。。</p>
+<pre><code>package main;
+import (
+	&quot;fmt&quot;
+);
+
+const LINES int = 100;//设定杨辉三角10行，同时也相当于10列
+
+func ShowYanghui(){
+	var yh [LINES][LINES]int;
+	for i := 0; i &lt; LINES; i++ {
+		for j := 0; j &lt; i + 1; j++ {
+			if i &lt; 2 {//两行以内三角中的数字都是1
+				yh[i][j] = 1;
+			}else{//第三行开始，正式计算数值写入数组
+				if j == 0 || j == i {
+					yh[i][j] = 1;//所有行的第一列和最后一列都是1
+				}else{
+					yh[i][j] = yh[i-1][j-1] + yh[i-1][j];//当前数组元素是上一行的前一个元素加上上一行的当前列元素
+				}
+			}
+			fmt.Printf(&quot;%d\t&quot;, yh[i][j] );//格式化输出一行
+		}
+		fmt.Print(&quot;\n&quot;);//换行
+	}
+}
+
+func main(){
+	ShowYanghui();
+};
+</code></pre>
+<p>U1S1，GOLANG的运行效率好像真的不如C++。。。。。。</p>
+
+            </div>
+          </article>
         </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/d1">
+                <h3 class="post-title">
+                  关于Gerda OS
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://qqfloatingice.github.io//images/avatar.png?v=1589635142409" class="no-responsive avatar">
@@ -399,35 +429,35 @@ show_date_time()
           golang
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge secondary">
           kaios
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge ">
           电脑
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge warning">
           C++
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge secondary">
           软件推荐
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge secondary">
           手机
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge secondary">
           测评
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge ">
           氵
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge warning">
           Gridea
         </a>
       
@@ -452,8 +482,12 @@ show_date_time()
 </div>
   </div>
 </div>
-  
+
+
     </div>
+
+
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -468,5 +502,10 @@ hljs.initHighlightingOnLoad()
 
 
 
+	
+	
+	
+	
   </body>
+  
 </html>

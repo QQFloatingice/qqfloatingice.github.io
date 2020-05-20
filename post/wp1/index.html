@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>golang | QQ floating ice</title>
+<title>【新】有关WP手机系统升级降级刷机问题(2020.5.20)  By：liwan599整理 | QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -73,8 +73,14 @@ show_date_time()
 </script>
 
 
+	<link rel="stylesheet" type="text/css" href="/styles/railscasts.css">
+    <link rel="stylesheet" href="/styles/default.css">
+    <script src="/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+	
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
@@ -147,40 +153,74 @@ show_date_time()
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
-          <h2 class="current-tag">标签: golang</h2>
-          
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://qqfloatingice.github.io//post/g0">初学golang实现杨辉三角</a>
-    </h2>
-    <p class="article-meta">
-      2020-05-16
-      
-        <a href="https://qqfloatingice.github.io//tag/AiYLawc_Y" class="badge secondary">
-          golang
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://qqfloatingice.github.io//post/g0" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
+          <article class="article">
+            <h1>【新】有关WP手机系统升级降级刷机问题(2020.5.20)  By：liwan599整理</h1>
+            <p class="article-meta">
+              2020-05-20
+              
+                <a href="https://qqfloatingice.github.io//tag/N85UqJwMt" class="badge ">
+                  WP
+                </a>
+              
+                <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge secondary">
+                  手机
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <p>有关WP手机系统升级降级刷机问题(2020年5月20日更新)   By：liwan599整理
+其中主要是升级问题，此教程适用于那些无法进行OTA更新的机友们，要么是更新错误，要么是机型不支持（首选改机型）…………要么是哭脸等等
+WP手机升级问题分几种情况：</p>
+<p>注：WP8升级WP10的OTA升级容易出错，毕竟8已经停止支持了，如果可以直接OTA升级更好</p>
+<p>WP8升级WP8.1、WP8.1升级WP8.1更新： 通过OTC工具（限Lumia）升级或者刷入8.1的固件（部分机器可能没有），如果可以直接OTA升级更好。注：刷机见Part1，OTC的使用见Part2</p>
+<p>WP8.1更新 升级Win10：对于受官方支持Win10的机器用OTC工具（限Lumia），而不受官方支持的机型则使用离线推送。注：OTC的使用见Part2，受微软官方支持升级Win10的Lumia机型列表见Part3，离线推送见Part4</p>
+<p>有机友反应离线推送或者OTC后10586 OTA升级14393会哭脸，那么可以使用OTC或离线推送，如果可以机型直接OTA升级更好</p>
+<p>Win10M 10586升级 14393：对于受官方支持14393的机器用OTC工具（限Lumia），如果可以直接OTA升级更好，可以用V11版本离线包推送，或者选择用Interop tools工具改机型升级（适用于不受支持的机型） 注：OTC的使用见Part2，离线推送见Part4，Interop tools工具改机型见Part5</p>
+<p>Win10M 14393升级15063或15254：一律选择用Interop tools工具改机型升级，如果可以直接OTA升级更好</p>
+<p>另外如果驱动有问题装一下WDRT！！！即Windows Device Recovery Tool</p>
+<p>具体教程和注意事项：</p>
+<p>Part1  刷机无具体教程，没什么问题：
+固件一律智机网或者<a href="https://www.lumiafirmware.com/">链接</a>下载，一定用IDM下载器！！！下载速度会较快。刷机工具自己水平高的就Thor2命令行，英语没问题的可以WPI，小白一枚的智机网刷机工具它不香吗？另外刷机请安装驱动，直接安装个WDRT即可</p>
+<p>附WPI刷机方法：运行WP Internals。若WP Internals成功识别了你的手机，你则可在其首页看到你手机的信息。若WP Internals无法识别你的手机，请检查驱动程序状态、手机状态以及线缆连接的可靠性。
+以下步骤均以你的手机已被WP Internals正常识别为前提假设。点击WP Internals窗口左侧的“Flash”链接，在窗口右侧找到“Flash original FFU”操作区，
+点击“Select the FFU-file to flash to the phone...”链接，选择FFU格式的Windows Phone系统固件，然后点击“Flash FFU image”按钮即可，刷机过程一定不要瞎动！！！</p>
+<p>Part2  OTC：
+OTC下载<a href="https://www.microsoft.com/en-us/download/details.aspx?id=56726">链接</a>，下载后打开安装包选择一个你能记住的路径安装。完成后，打开你所选择的路径，连上手机，保持网络畅通，运行otcupdate.exe即可。
+一定什么都不要动！！！！！电脑手机也不要锁屏！！！如果发生锁屏意外导致失败，抱歉，重置手机重新推送吧。另外，微软的服务器你懂的，网络出错了就多试几次，再不行…………如果是要升级win10m就离线推送吧</p>
+<p>Part3 微软官方支持升级Win10的Lumia机型列表
+Lumia 929（Icon）、1520、930、640、640XL、730、735、830、532、535、540、635（1GB版）、636（1GB版）、638（1GB版）、430、435等等</p>
+<p>Part4 离线推送
+离线推送教程：IT之家搜索“离线更新包”好几篇教程，哪个能用就哪个，V51版本有时候不行就V41，iutool图形化推送工具已经废了，请使用命令行，如果实在不会就下载酷七手机推送助手，一定是推送助手，不要下错了！！！
+之家的教程有的离线包链接失效了，附上一个很全面的离线包合集链接：<a href="https://pan.baidu.com/s/1x6EW6k4bBEkoeI4m-jdJEQ">链接</a> 提取码: 71et（感谢QQ浮冰提供的网盘链接）</p>
+<p>另外升级10586.107后输入法不能用，这时候可以尝试继续升级看看能不能修复，或者IT之家搜索“输入法修复“有教程，网盘链接中有修复要用到的！</p>
+<p>Part5 interop tools改机型
+interop tools改机型教程：[经验] Windows10移动版通过改机型升级1709方法（作者名侦探fengt）[链接]（https://quan.ithome.com/0/636/901.htm或https://quan.ithome.com/0/137/841.html)
+（尽量用1.9版本，千万不要用商店版！！！1.9不行就1.5版。注意，一定要安装组件！！！打开开发者模式先装组件后装主程序。）</p>
+<p>降级刷机问题：直接刷你机型对应的固件即可，上面的Part1已经讲得很明白了。</p>
+<p>另外，本人并不是大佬，此教程仅仅是是整理了大家的问题并整合引用了大佬们的教程，如有侵权请联系我，我会删除侵权部分教程，谢谢！</p>
+<p>By：liwan599整理</p>
 
-
+            </div>
+          </article>
         </div>
-        <div class="row flex-edges">
-  
-  
-</div>
-
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://qqfloatingice.github.io//post/b9">
+                <h3 class="post-title">
+                  几何画板的替代品
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://qqfloatingice.github.io//images/avatar.png?v=1589977788550" class="no-responsive avatar">
@@ -393,11 +433,11 @@ show_date_time()
           WP
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge secondary">
           手机
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge secondary">
           软件推荐
         </a>
       
@@ -405,7 +445,7 @@ show_date_time()
           电脑
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/AiYLawc_Y" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/AiYLawc_Y" class="badge secondary">
           golang
         </a>
       
@@ -413,19 +453,19 @@ show_date_time()
           kaios
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge ">
+        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge warning">
           C++
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge success">
+        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge ">
           测评
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge warning">
+        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge secondary">
           氵
         </a>
       
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge secondary">
+        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge success">
           Gridea
         </a>
       
@@ -451,7 +491,11 @@ show_date_time()
   </div>
 </div>
 
+
     </div>
+
+
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -466,5 +510,10 @@ hljs.initHighlightingOnLoad()
 
 
 
+	
+	
+	
+	
   </body>
+  
 </html>

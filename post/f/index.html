@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" >
+<html lang="zh-CN">
 
-<title>【转】修复8110的按键速度 | QQ floating ice</title>
+<head>
+  <meta charset="UTF-8" />
+<title>【转】修复8110的按键速度 - QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -49,123 +49,159 @@ show_date_time()
 &lt;/html&gt;
 
 ">
-
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://qqfloatingice.github.io//favicon.ico?v=1590828363305">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
-<link rel="stylesheet" href="https://qqfloatingice.github.io//styles/main.css">
+<link type='text/css' rel='stylesheet' href='https://qqfloatingice.github.io//styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162752155-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-162752155-1');
+    hljs.initHighlightingOnLoad();
 </script>
+</head>
+
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://qqfloatingice.github.io/">
+								<img class="logo"
+									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1590841869185"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="/">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/2">关于</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="点我"
+										href="/post/3">点我</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="友情链接"
+										href="/post/1">友情链接</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
 
 
-	<link rel="stylesheet" type="text/css" href="/styles/railscasts.css">
-    <link rel="stylesheet" href="/styles/default.css">
-    <script src="/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-	
-  </head>
-  <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://qqfloatingice.github.io/">QQ floating ice</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/tags" class="menu">
-                标签
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/post/2" class="menu">
-                关于
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/post/3" class="menu">
-                点我
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/post/1" class="menu">
-                友情链接
-              </a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>【转】修复8110的按键速度</h1>
-            <p class="article-meta">
-              2020-04-03
-              
-                <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge secondary">
-                  kaios
-                </a>
-              
-            </p>
-            
-            <div class="post-content">
-              <h2 id="tags">tags:</h2>
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1590841869185" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/2">关于</a></li>
+			
+			<li class="layout-collapse-item"><a title="点我" href="/post/3">点我</a></li>
+			
+			<li class="layout-collapse-item"><a title="友情链接" href="/post/1">友情链接</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">【转】修复8110的按键速度</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                               <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="post--keyword"
+                                data-title="kaios" data-type="post_tag" data-term-id="39">kaios</a>
+                              
+                            </div>
+                            <div class="item">
+                              <span>2020-04-03</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <h2 id="tags">tags:</h2>
 <p><strong>本教程来自Banana-Hackers论坛，由<em>Sylvain D</em>提供原教程，<em>Vivek</em>改进，KaiOSLab翻译。</strong></p>
 <p>8110的一个经典问题是打字速度太过诡异，这里是解决(缓解)这个问题的方法</p>
 <p>***注意***在做如下步骤前请root你的手机，软件<a href="https://www.heppy.wang/archives/47/">点此</a>，教程<a href="https://www.heppy.wang/archives/94/">点此</a>——来自清水博客</p>
@@ -205,278 +241,88 @@ Keypad.prototype.IDLE_INTERVAL=400;
 <p><strong>5~7步的作用：防止更改system而引起的翻车恢复不了，执行5~7步后，所有的更改将会在出厂设置后恢复，之前执行过的可以不执行5~7步</strong></p>
 <p><em><strong>————转自QQ old ice 的<a href="https://www.kaioslab.xyz/">KaiOSlab</a></strong></em></p>
 
-            </div>
-          </article>
-        </div>
-        <div class="paper" data-aos="fade-in">
-          
-            <div class="next-post">
-              <div class="next">
-                下一篇
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/f/" class="leancloud-visitors view"
+                              data-flag-title="【转】修复8110的按键速度">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-12">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://qqfloatingice.github.io//post/p" class="title">
+                                      <h4>kaios百度翻译开发笔记</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>下一篇</span></div>
+                                  <div class="item">2020-04-03</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        </div>
+
+                        <div class="layout-comments"></div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#tags">tags:</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <a href="https://qqfloatingice.github.io//post/p">
-                <h3 class="post-title">
-                  kaios百度翻译开发笔记
-                </h3>
-              </a>
             </div>
-          
+          </div>
         </div>
-        
       </div>
-
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://qqfloatingice.github.io//images/avatar.png?v=1590828363305" class="no-responsive avatar">
-    <div class="text-muted"><p>A personal blog for QQ floating ice</p>
-
-
-<p><img src="https://s0.xinger.ink/acgimg/acgurl.php"></p>
-
-
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=425137440&auto=1&height=66"></iframe>
-
-
-
-<html>
-<head>
-<meta charset="utf-8">
-<title>本站已艰难的已运行</title>
-</head>
-<body>
-<script type="text/javascript">
-function show_date_time() {
-	window.setTimeout("show_date_time()", 1000);
-	var BirthDay = new Date("04/02/2020 00:11:01");  //这里括号填你站点建立时间
-	var today = new Date();
-	var timeold = (today.getTime() - BirthDay.getTime());
-	var sectimeold = timeold / 1000;
-	var secondsold = Math.floor(sectimeold);
-	var msPerDay = 24 * 60 * 60 * 1000;
-	var e_daysold = timeold / msPerDay;
-	var daysold = Math.floor(e_daysold);
-	var e_hrsold = (e_daysold - daysold) * 24;
-	var hrsold = Math.floor(e_hrsold);
-	var e_minsold = (e_hrsold - hrsold) * 60;
-	var minsold = Math.floor((e_hrsold - hrsold) * 60);
-	var seconds = Math.floor((e_minsold - minsold) * 60);
-	document.getElementById 
-	("show_date_time").innerHTML="本站艰难地存活了"+daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-}
-show_date_time()
-</script>
-<p>
-	<span id="show_date_time"></span>
-</p>
-</body>
-</html>
-
-</div>
-    <div class="social-container">
-      
-        
-          <a href="https://github.com/QQFloatingice" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-          <a href="https://weibo.com/7381402429/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
-            <i class="fab fa-weibo"></i>
-          </a>
-        
-      
-        
-          <a href="https://www.zhihu.com/people/qqfloatingice" target="_blank">
-            <i class="fab fa-zhihu"></i>
-          </a>
-        
-      
-        
-      
     </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/wp1">【新】有关WP手机系统升级降级刷机问题(2020.5.20)  By：liwan599整理</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/b9">几何画板的替代品</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/a0">流氓软件清除计划</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/g0">初学golang实现杨辉三角</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/d1">关于Gerda OS</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/d0">本博客已和百度达成合作（滑稽）</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/c5">视频测试</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/k">首次实现硬核无损改装笔记本支持服务器U.2硬盘</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/c4">俄罗斯方块</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://qqfloatingice.github.io//post/c3">几个贪吃蛇</a>
-            </li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://qqfloatingice.github.io//tag/N85UqJwMt" class="badge ">
-          WP
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/gLqvAwgqh" class="badge ">
-          手机
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/k77imxtao" class="badge success">
-          软件推荐
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/iXvfrvFWl" class="badge warning">
-          电脑
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/AiYLawc_Y" class="badge secondary">
-          golang
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="badge secondary">
-          kaios
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/pXdlKiSpP" class="badge ">
-          C++
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/S4ZrZpKUW" class="badge warning">
-          测评
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/uRCalDAJ2" class="badge warning">
-          氵
-        </a>
-      
-        <a href="https://qqfloatingice.github.io//tag/1HwciKMM-" class="badge success">
-          Gridea
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    <p><img src="https://api.mikumiku.cc/acgimg/acg.php"></p>
+
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+    	<div class="layout-footer">
+
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									<p><img src="https://api.mikumiku.cc/acgimg/acg.php"></p>
 
 
 
@@ -492,32 +338,45 @@ show_date_time()
         <sup style="color:grey">访问人数<span id="busuanzi_value_site_uv" ></span>位</sup>
     </span>
 </div>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/main.js'></script>
+	
+
   </div>
-</div>
+</body>
 
-
-    </div>
-
-
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
-
-hljs.initHighlightingOnLoad()
-
-</script>
-
-
-
-
-	
-	
-	
-	
-  </body>
-  
 </html>

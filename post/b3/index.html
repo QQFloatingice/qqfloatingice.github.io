@@ -77,7 +77,7 @@ show_date_time()
 						<div class="logo">
 							<a href="https://qqfloatingice.github.io/">
 								<img class="logo"
-									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1590843976162"
+									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1590844391540"
 									alt="">
 							</a>
 						</div>
@@ -124,7 +124,7 @@ show_date_time()
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1590843976162" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1590844391540" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -369,11 +369,43 @@ XTU之所以是XTU，正是因为全英文的界面+各种术语及其的不友�
 							<div class="col-12 col-md-9">
 								<div class="footer-copy">
 									
-									
+									<p style="text-align:center">Copyright © 2020 QQ Floating Ice. All rights reserved.</p>
 
 
+<html>
+<head>
+<meta charset="utf-8">
+<title>本站已艰难的已运行</title>
+</head>
+<body>
+<script type="text/javascript">
+function show_date_time() {
+	window.setTimeout("show_date_time()", 1000);
+	var BirthDay = new Date("04/02/2020 00:11:01");  //这里括号填你站点建立时间
+	var today = new Date();
+	var timeold = (today.getTime() - BirthDay.getTime());
+	var sectimeold = timeold / 1000;
+	var secondsold = Math.floor(sectimeold);
+	var msPerDay = 24 * 60 * 60 * 1000;
+	var e_daysold = timeold / msPerDay;
+	var daysold = Math.floor(e_daysold);
+	var e_hrsold = (e_daysold - daysold) * 24;
+	var hrsold = Math.floor(e_hrsold);
+	var e_minsold = (e_hrsold - hrsold) * 60;
+	var minsold = Math.floor((e_hrsold - hrsold) * 60);
+	var seconds = Math.floor((e_minsold - minsold) * 60);
+	document.getElementById 
+	("show_date_time").innerHTML="本站艰难地存活了"+daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+}
+show_date_time()
+</script>
+<p>
+	<span id="show_date_time"></span>
+</p>
+</body>
+</html>
 
-<p style="text-align:center">Copyright © 2020 QQ Floating Ice. All rights reserved.</p>
+
 
 <div>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

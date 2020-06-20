@@ -77,7 +77,7 @@ show_date_time()
 						<div class="logo">
 							<a href="https://qqfloatingice.github.io/">
 								<img class="logo"
-									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1592642707482"
+									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1592642970164"
 									alt="">
 							</a>
 						</div>
@@ -128,7 +128,7 @@ show_date_time()
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1592642707482" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1592642970164" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -212,6 +212,24 @@ show_date_time()
 <p>（2）官方镜像，可以在FreeNAS官网下载。这里我可能以后会加上自己的源</p>
 <p>（3）U盘一个，硬盘两个，由于FreeNAS安装在一整块磁盘上，如果安装在一块硬盘上就没能存储数据，所以一个硬盘作为系统盘，一个刻录安装镜像。系统盘最好大于8G。</p>
 <p>（4）win32diskimager刻录软件。</p>
+<h2 id="安装步骤">安装步骤</h2>
+<p>1.刻录系统安装U盘。安装win32diskimager，打开下载好的FreeNAS镜像。插入优盘设备选择优盘，点击写入，等待写入完成。安装U盘就做好了。</p>
+<p>2.进入BIOS，将安装U盘和系统盘都插入准备安装FreeNAS的设备，插入一个键盘，开机按F12（不同的主板按键不同）进入BIOS，选择刻录的U盘启动，这里选择第二个。</p>
+<p>3.进入安装程序，标志性的图标出现根据提示按Enter键。</p>
+<p>选择install/upgrade点确定键。</p>
+<p>选择作为系统盘的优盘，空格选择，enter确认。这里建议选择16G优盘，8G有时会报错，改换16G安装很快。</p>
+<p>一些警告，确认进入下一步。</p>
+<p>为FreeNAS设置一个密码。</p>
+<p>选择Boot模式，不同主板模式不同，支持UEFI的选择UEFI模式。</p>
+<p>开始安装。</p>
+<p>安装成功，拔掉安装U盘，重启。</p>
+<p>显示一些配置信息。最小面有webUI的局域网地址（在插入网线的情况下）。</p>
+<p>登录系统</p>
+<p>在浏览器中输入局域网IP地址。用户名输入root，密码是安装时候设置的密码。</p>
+<p>新版本界面不支持中文，但是可以以旧版登录。</p>
+<p>​用箭头所指模式登录。</p>
+<p>完美支持中文。</p>
+<p>接下来就是存储空间和用户的创建，FreeNAS的功能很多，有待以后发掘。搭建家庭影音中心Plex也是不错的，还可以搭建家庭私有云nextcoud。</p>
 
                           </div>
                         </div>
@@ -290,6 +308,7 @@ show_date_time()
 <li>
 <ul>
 <li><a href="#%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7">必备工具</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4">安装步骤</a></li>
 </ul>
 </li>
 </ul>

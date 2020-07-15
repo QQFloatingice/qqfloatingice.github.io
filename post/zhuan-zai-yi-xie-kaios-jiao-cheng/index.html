@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+<title>【转载】一些kaios教程 - QQ floating ice</title>
+<meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
+
+
+
+
+
+
+&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=330 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=425137440&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;
+
+
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&#34;utf-8&#34;&gt;
+&lt;title&gt;本站已艰难的已运行&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+function show_date_time() {
+	window.setTimeout(&#34;show_date_time()&#34;, 1000);
+	var BirthDay = new Date(&#34;04/02/2020 00:11:01&#34;);  //这里括号填你站点建立时间
+	var today = new Date();
+	var timeold = (today.getTime() - BirthDay.getTime());
+	var sectimeold = timeold / 1000;
+	var secondsold = Math.floor(sectimeold);
+	var msPerDay = 24 * 60 * 60 * 1000;
+	var e_daysold = timeold / msPerDay;
+	var daysold = Math.floor(e_daysold);
+	var e_hrsold = (e_daysold - daysold) * 24;
+	var hrsold = Math.floor(e_hrsold);
+	var e_minsold = (e_hrsold - hrsold) * 60;
+	var minsold = Math.floor((e_hrsold - hrsold) * 60);
+	var seconds = Math.floor((e_minsold - minsold) * 60);
+	document.getElementById 
+	(&#34;show_date_time&#34;).innerHTML=&#34;本站艰难地存活了&#34;+daysold + &#34;天&#34; + hrsold + &#34;小时&#34; + minsold + &#34;分&#34; + seconds + &#34;秒&#34;;
+}
+show_date_time()
+&lt;/script&gt;
+&lt;p&gt;
+	&lt;span id=&#34;show_date_time&#34;&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link type='text/css' rel='stylesheet' href='https://qqfloatingice.github.io//styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://qqfloatingice.github.io/">
+								<img class="logo"
+									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1594775404095"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="/">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/2">关于</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="点我"
+										href="/post/3">点我</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="友情链接"
+										href="/post/1">友情链接</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="自由讨论版"
+										href="/post/zi-you-tao-lun-ban">自由讨论版</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1594775404095" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/2">关于</a></li>
+			
+			<li class="layout-collapse-item"><a title="点我" href="/post/3">点我</a></li>
+			
+			<li class="layout-collapse-item"><a title="友情链接" href="/post/1">友情链接</a></li>
+			
+			<li class="layout-collapse-item"><a title="自由讨论版" href="/post/zi-you-tao-lun-ban">自由讨论版</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">【转载】一些kaios教程</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                               <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="post--keyword"
+                                data-title="kaios" data-type="post_tag" data-term-id="39">kaios</a>
+                              
+                            </div>
+                            <div class="item">
+                              <span>2020-07-15</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <h2 id="以下内容均转载自insorasky">以下内容均转载自<a href="https://www.sorasky.in/">inSoraSky</a></h2>
+<h3 id="2020年7月nokia-8110-4g-gerdaos刷机教程"><a href="https://qqfloatingice.github.io/post/k18">【2020年7月】Nokia 8110 4G GerdaOS刷机教程</a></h3>
+<h3 id="清水博客汉化omnisd本教程中的此教程地址为httpsqqfloatingicegithubiopostk8"><a href="https://qqfloatingice.github.io/post/k17">【清水博客汉化】OmniSD（本教程中的此教程地址为https://qqfloatingice.github.io/post/k8）</a></h3>
+<h3 id="清水博客汉化reader-by-wolfff78"><a href="https://qqfloatingice.github.io/post/k16">【清水博客汉化】reader by wolfff78</a></h3>
+<h3 id="清水博客汉化wallace-toolbox折腾kaios手机的全能app"><a href="https://qqfloatingice.github.io/post/k15">【清水博客汉化】Wallace Toolbox——折腾kaiOS手机的全能APP</a></h3>
+<h3 id="软件分享kaiboy汉化版"><a href="https://qqfloatingice.github.io/post/k14">【软件分享】KaiBoy汉化版</a></h3>
+<h3 id="转载把掰直的香蕉掰回去8110恢复原厂系统教程"><a href="https://qqfloatingice.github.io/post/k13">【转载】把掰直的香蕉掰回去——8110恢复原厂系统教程</a></h3>
+<h3 id="8110-v16系统root方法"><a href="https://qqfloatingice.github.io/post/k12">8110 V16系统root方法</a></h3>
+<h3 id="8110恢复官方系统"><a href="https://qqfloatingice.github.io/post/k11">8110恢复官方系统</a></h3>
+<h3 id="kaios相关的网站推荐"><a href="https://qqfloatingice.github.io/post/k10">kaiOS相关的网站推荐</a></h3>
+<h3 id="nokia-8110-4g-拨号盘神秘代码"><a href="https://qqfloatingice.github.io/post/k9">Nokia 8110 4G 拨号盘神秘代码</a></h3>
+<h3 id="onekeyomnisd-一键安装omnisd"><a href="https://qqfloatingice.github.io/post/k8">OneKeyOmniSD - 一键安装OmniSD</a></h3>
+<h3 id="root你的香蕉机"><a href="https://qqfloatingice.github.io/post/k7">root你的香蕉机</a></h3>
+<h3 id="第三方8110-kaios刷机包v12uk"><a href="https://qqfloatingice.github.io/post/k6">第三方8110 kaiOS刷机包：V12+UK</a></h3>
+<h3 id="如何让8110的终端cli程序解析域名"><a href="https://qqfloatingice.github.io/post/k5">如何让8110的终端CLI程序解析域名</a></h3>
+<h3 id="如何让香蕉开车开的更快nokia-8110-4g-提速小技巧"><a href="https://qqfloatingice.github.io/post/k4">如何让香蕉开车开的更快——Nokia 8110 4G 提速小技巧</a></h3>
+<h3 id="色彩斑斓的recovery-philz-touch-recovery只适用于nokia-8110-4g"><a href="https://qqfloatingice.github.io/post/k3">色彩斑斓的Recovery - Philz Touch Recovery（只适用于Nokia 8110 4G）</a></h3>
+<h3 id="适用于nokia-8110-4gkaios的app"><a href="https://qqfloatingice.github.io/post/k2">适用于Nokia 8110 4G(KaiOS)的app</a></h3>
+<h3 id="修改8110的开机第一屏"><a href="https://qqfloatingice.github.io/post/k1">修改8110的开机第一屏</a></h3>
+<h6 id="ps我比较烂没把图全发在图床上以上教程的图可能会404在这里说声抱歉">p.s.我比较烂，没把图全发在图床上，以上教程的图可能会404在这里说声抱歉</h6>
+
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/zhuan-zai-yi-xie-kaios-jiao-cheng/" class="leancloud-visitors view"
+                              data-flag-title="【转载】一些kaios教程">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://qqfloatingice.github.io//post/a-zhe" class="title">
+                                      <h4>啊，这！</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>下一篇</span></div>
+                                  <div class="item">2020-07-14</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://qqfloatingice.github.io//post/a-zhe"
+                                    style="background-image: url('https://i.loli.net/2020/07/14/JLl9pre1k7DqZOM.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        </div>
+
+                        <div class="layout-comments"></div>
+                        
+                        <script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/zan.js'></script>
+<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/av-min.js'></script>
+<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/Valine.min.js'></script>
+
+<script>
+  var valine = new Valine();
+  valine.init({
+    el: '.layout-comments',
+    appId: 'S40eoesUeqxPCxGzruxMGp2X-MdYXbMMI',
+    appKey: 'Y4EFOxOuF1pSfSBkuaHoCf5F',
+    notify: false,
+    verify: false,
+    visitor: true,
+    avatar: 'mp',
+    placeholder: '加入讨论...'
+  })
+</script>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E5%9D%87%E8%BD%AC%E8%BD%BD%E8%87%AAinsorasky">以下内容均转载自inSoraSky</a>
+<ul>
+<li><a href="#2020%E5%B9%B47%E6%9C%88nokia-8110-4g-gerdaos%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B">【2020年7月】Nokia 8110 4G GerdaOS刷机教程</a></li>
+<li><a href="#%E6%B8%85%E6%B0%B4%E5%8D%9A%E5%AE%A2%E6%B1%89%E5%8C%96omnisd%E6%9C%AC%E6%95%99%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%AD%A4%E6%95%99%E7%A8%8B%E5%9C%B0%E5%9D%80%E4%B8%BAhttpsqqfloatingicegithubiopostk8">【清水博客汉化】OmniSD（本教程中的此教程地址为https://qqfloatingice.github.io/post/k8）</a></li>
+<li><a href="#%E6%B8%85%E6%B0%B4%E5%8D%9A%E5%AE%A2%E6%B1%89%E5%8C%96reader-by-wolfff78">【清水博客汉化】reader by wolfff78</a></li>
+<li><a href="#%E6%B8%85%E6%B0%B4%E5%8D%9A%E5%AE%A2%E6%B1%89%E5%8C%96wallace-toolbox%E6%8A%98%E8%85%BEkaios%E6%89%8B%E6%9C%BA%E7%9A%84%E5%85%A8%E8%83%BDapp">【清水博客汉化】Wallace Toolbox——折腾kaiOS手机的全能APP</a></li>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%ABkaiboy%E6%B1%89%E5%8C%96%E7%89%88">【软件分享】KaiBoy汉化版</a></li>
+<li><a href="#%E8%BD%AC%E8%BD%BD%E6%8A%8A%E6%8E%B0%E7%9B%B4%E7%9A%84%E9%A6%99%E8%95%89%E6%8E%B0%E5%9B%9E%E5%8E%BB8110%E6%81%A2%E5%A4%8D%E5%8E%9F%E5%8E%82%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B">【转载】把掰直的香蕉掰回去——8110恢复原厂系统教程</a></li>
+<li><a href="#8110-v16%E7%B3%BB%E7%BB%9Froot%E6%96%B9%E6%B3%95">8110 V16系统root方法</a></li>
+<li><a href="#8110%E6%81%A2%E5%A4%8D%E5%AE%98%E6%96%B9%E7%B3%BB%E7%BB%9F">8110恢复官方系统</a></li>
+<li><a href="#kaios%E7%9B%B8%E5%85%B3%E7%9A%84%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90">kaiOS相关的网站推荐</a></li>
+<li><a href="#nokia-8110-4g-%E6%8B%A8%E5%8F%B7%E7%9B%98%E7%A5%9E%E7%A7%98%E4%BB%A3%E7%A0%81">Nokia 8110 4G 拨号盘神秘代码</a></li>
+<li><a href="#onekeyomnisd-%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85omnisd">OneKeyOmniSD - 一键安装OmniSD</a></li>
+<li><a href="#root%E4%BD%A0%E7%9A%84%E9%A6%99%E8%95%89%E6%9C%BA">root你的香蕉机</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E6%96%B98110-kaios%E5%88%B7%E6%9C%BA%E5%8C%85v12uk">第三方8110 kaiOS刷机包：V12+UK</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E8%AE%A98110%E7%9A%84%E7%BB%88%E7%AB%AFcli%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D">如何让8110的终端CLI程序解析域名</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E8%AE%A9%E9%A6%99%E8%95%89%E5%BC%80%E8%BD%A6%E5%BC%80%E7%9A%84%E6%9B%B4%E5%BF%ABnokia-8110-4g-%E6%8F%90%E9%80%9F%E5%B0%8F%E6%8A%80%E5%B7%A7">如何让香蕉开车开的更快——Nokia 8110 4G 提速小技巧</a></li>
+<li><a href="#%E8%89%B2%E5%BD%A9%E6%96%91%E6%96%93%E7%9A%84recovery-philz-touch-recovery%E5%8F%AA%E9%80%82%E7%94%A8%E4%BA%8Enokia-8110-4g">色彩斑斓的Recovery - Philz Touch Recovery（只适用于Nokia 8110 4G）</a></li>
+<li><a href="#%E9%80%82%E7%94%A8%E4%BA%8Enokia-8110-4gkaios%E7%9A%84app">适用于Nokia 8110 4G(KaiOS)的app</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B98110%E7%9A%84%E5%BC%80%E6%9C%BA%E7%AC%AC%E4%B8%80%E5%B1%8F">修改8110的开机第一屏</a>
+*
+*
+* <a href="#ps%E6%88%91%E6%AF%94%E8%BE%83%E7%83%82%E6%B2%A1%E6%8A%8A%E5%9B%BE%E5%85%A8%E5%8F%91%E5%9C%A8%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BB%A5%E4%B8%8A%E6%95%99%E7%A8%8B%E7%9A%84%E5%9B%BE%E5%8F%AF%E8%83%BD%E4%BC%9A404%E5%9C%A8%E8%BF%99%E9%87%8C%E8%AF%B4%E5%A3%B0%E6%8A%B1%E6%AD%89">p.s.我比较烂，没把图全发在图床上，以上教程的图可能会404在这里说声抱歉</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+    	<div class="layout-footer">
+
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									<p style="text-align:center">Copyright © 2020 QQ Floating Ice. All rights reserved.</p>
+
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>本站已艰难的已运行</title>
+</head>
+<body>
+<script type="text/javascript">
+function show_date_time() {
+	window.setTimeout("show_date_time()", 1000);
+	var BirthDay = new Date("04/02/2020 00:11:01");  //这里括号填你站点建立时间
+	var today = new Date();
+	var timeold = (today.getTime() - BirthDay.getTime());
+	var sectimeold = timeold / 1000;
+	var secondsold = Math.floor(sectimeold);
+	var msPerDay = 24 * 60 * 60 * 1000;
+	var e_daysold = timeold / msPerDay;
+	var daysold = Math.floor(e_daysold);
+	var e_hrsold = (e_daysold - daysold) * 24;
+	var hrsold = Math.floor(e_hrsold);
+	var e_minsold = (e_hrsold - hrsold) * 60;
+	var minsold = Math.floor((e_hrsold - hrsold) * 60);
+	var seconds = Math.floor((e_minsold - minsold) * 60);
+	document.getElementById 
+	("show_date_time").innerHTML="本站艰难地存活了"+daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+}
+show_date_time()
+</script>
+<p>
+	<span id="show_date_time"></span>
+</p>
+</body>
+</html>
+
+
+
+<div>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">
+        <sup style="color:grey">总访问量<span id="busuanzi_value_site_pv"></span>次</sup>
+    </span>
+    <sup><span style="color:grey" class="post-meta-divider">|</span></sup>
+    <span id="busuanzi_container_site_uv">
+        <sup style="color:grey">访问人数<span id="busuanzi_value_site_uv" ></span>位</sup>
+    </span>
+</div>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									<span class="footer-links-item">
+										<a href="https://weibo.com/u/7381402429/home?wvr=5&amp;sudaref=www.hao123.com&amp;display=0&amp;retcode=6102" target="_blank">
+											<i class="fa fa-weibo" aria-hidden="true"></i>
+										</a>
+									</span>
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/main.js'></script>
+	
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?711dce8a427cf378d6a7d704594f91f4";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	
+
+  </div>
+</body>
+
+</html>

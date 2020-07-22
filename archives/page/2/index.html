@@ -2,8 +2,8 @@
 <html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8" />
-<title>kaios百度翻译开发笔记 - QQ floating ice</title>
+	<meta charset="UTF-8" />
+<title>QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -64,8 +64,8 @@ show_date_time()
 </head>
 
 <body>
-  <div class="layout theme-dark">
-    <div class="layout-header">
+	<div class="layout theme-dark">
+		<div class="layout-header">
 
 	<div class="layout-header-main">
 		<div class="container">
@@ -157,7 +157,7 @@ show_date_time()
 	</div>
 
 </div>
-    <div class="layout-collapse d-md-none">
+		<div class="layout-collapse d-md-none">
 	<div class="layout-collapse-main">
 		<ul class="layout-collapse-list">
 			
@@ -180,189 +180,69 @@ show_date_time()
 	</div>
 </div>
 
-    <div class="layout-content">
-      <div class="layout-content-main">
-        <div class="container">
-          <div class="row justify-content-lg-center">
-            <div class="col-12 col-lg-9">
-              <div class="layout-post">
-                <div class="layout-post-body">
-                  <div class="row">
+		<div class="layout-content">
+			<div class="layout-content-main">
+				<div class="container">
+					<div class="row justify-content-lg-center">
+						<div class="col-12 col-lg-9">
+							<div class="layout-archive">
+								
+								
 
-                    <div class="col-12 col-lg-10">
-                      <div class="layout-post-main m-right m-md-right">
-                        <div class="layout-post-header">
-                          <h1 class="layout-post-title">kaios百度翻译开发笔记</h1>
-                          <div class="layout-post-meta">
-                            <div class="item">
-                               <a href="https://qqfloatingice.github.io//tag/tqc2OnKFb" class="post--keyword"
-                                data-title="kaios" data-type="post_tag" data-term-id="39">kaios</a>
-                              
-                            </div>
-                            <div class="item">
-                              <span>2020-04-03</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="layout-post-content">
-                          <div class="layout-post-item">
-                            
-                            <p>有于本人英语特别渣，所以特别需要一个翻译来解决问题，又因为最近的网课可以摸鱼，所以在kaios开发了给简陋的翻译0.0.1（目前更新一直鸽着）。。。。</p>
-<p>所以有人看到这个贴子的话（我知道这个小破站基本没人来。。。）请把它进行改进</p>
-<p>首先，请申请百度翻译API   得到key和ID这个也有用</p>
-<p>然后就构建html文件，要求可视化的可用DW（详见友情链接中的神奇的软件站）不要求的随便</p>
-<p>这里给个参考代码</p>
-<pre><code>&lt;!doctype html&gt;  
-&lt;html lang=&quot;en&quot;&gt;  
-&lt;head&gt;  
-    &lt;meta charset=&quot;UTF-8&quot;&gt;  
-    &lt;title&gt;Translate&lt;/title&gt;  
-&lt;/head&gt;  
-&lt;body&gt;  
-&lt;div id=&quot;SRC&quot;&gt;  
-&lt;textarea id=&quot;srcText&quot; name=&quot;srcText &quot; style=&quot;width:500px; height:120px;&quot;&gt;  
-&lt;/textarea&gt;  
-  
-&lt;button id=&quot;Click&quot; name=&quot;Click&quot;&gt;Translate&lt;/button&gt;  
-&lt;/div&gt;  
-  
-&lt;br /&gt;   
-&lt;hr /&gt;  
-&lt;div id=&quot;DST&quot;&gt;  
-&lt;textarea id=&quot;dstText&quot; name=&quot;dstText&quot; style=&quot;width:500px; height:120px;&quot;&gt;  
-&lt;/textarea&gt;  
-&lt;/div&gt;  
-  
-  
-&lt;/body&gt;  
-&lt;script src=&quot;jquery-1.8.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;  
-&lt;script type=&quot;text/javascript&quot;&gt;  
-   
-$(&quot;#Click&quot;).click(function (){  
-  
-var contents = $(&quot;#srcText&quot;).val() ;  
-alert(  contents) ;  
-  
-  
-$.ajax({  
-       type:&quot;get&quot;,  
-       async:false,                                                 //must be synchronized  
-       url:&quot;http://openapi.baidu.com/public/2.0/bmt/translate&quot;,  
-       dataType:&quot;jsonp&quot;,  
-       data: {  
-           from: &quot;翻译的源语言&quot;,                                              //language choose  
-           to: &quot;翻译成的语言&quot;,  
-           client_id:  这个地方输入你自己在百度开源申请的API 的 KEY,                  //baidu api key  
-           q: contents  
-       },     
-       success:function(json , status){  
-           
-            //alert(&quot;here is the status :&quot;+status) ;  
-            $(&quot;#dstText&quot;).empty() ;  
-  
-            for ( var i = 0 ; i &lt; json.trans_result.length ; i++ )  
-            {  
-            $(&quot;#dstText&quot;).append( json.trans_result[i].dst  +&quot; &lt;br /&gt;&quot;) ;  
-            }  
-        //  alert(json.trans_result[0].dst +&quot; &lt;br /&gt; &quot;+json.trans_result[0].src) ;  
-           
-      },  
-      error:function(){  
-          alert('Fail to translate with baidu API!');  
-      }  
-});  
-}) ;  
-  
-&lt;/script&gt;  
-&lt;/html&gt;  
-	
-	
+								<div class="card">
+									<div class="card-header">
+										<div class="header-content">
+											<div class="title">2019</div>
+										</div>
 
-</code></pre>
+									</div>
+									<div class="card-body">
+										
+										
+										<div class="card-item">
+											<div class="thumb">
+												
+												<a href="https://qqfloatingice.github.io//post/x"
+													style="background-image: url('https://qqfloatingice.github.io//images/avatar.png')"></a>
+												
+											</div>
+											<div class="list-content">
+												<div class="list-body">
+													<a class="title" href="https://qqfloatingice.github.io//post/x">【教程】DIY一块msata固态硬盘（来自我的原网站）</a>
+													<div class="time">2019-04-17</div>
+												</div>
+											</div>
+										</div>
+										
+										
+									</div>
+								</div>
+								
+							</div>
 
-                          </div>
-                        </div>
-                        <div class="layout-post-social">
-                          <div class="item reader">
-                            <div id="/post/p/" class="leancloud-visitors view"
-                              data-flag-title="kaios百度翻译开发笔记">
-                              <span class="post-meta-item-text">阅读 </span>
-                              <span class="leancloud-visitors-count"></span>
-                            </div>
-                          </div>
-                        </div>
+							<div class="layout-paginator">
+								<div class="paginator row">
+									<div class="col-6">
+										
+										<a href="https://qqfloatingice.github.io//archives/" class="btn btn-paginator width-100">上一页</a>
+										
+									</div>
+									<div class="col-6">
+										
+										<a class="btn disabled btn-paginator width-100">下一页</a>
+										
+									</div>
+								</div>
+							</div>
 
-                        <div class="layout-post-navigation">
-                          <div class="navigation-list">
-                            
-                            <div class="post-card row">
-                              
-                              <div class="card-content col-12">
-                                <div class="card-body">
-                                  <div class="header">
-                                    <a href="https://qqfloatingice.github.io//post/q" class="title">
-                                      <h4>让老旧平板焕发新生</h4>
-                                    </a>
-                                  </div>
-                                  <div class="inner">
-                                    <div class="abstract">
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-04-02</div>
-                                </div>
-                              </div>
-                              
-                            </div>
-                            
-                          </div>
-                        </div>
+						</div>
+					</div>
 
-                        <div class="layout-comments"></div>
-                        
-                        <script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/zan.js'></script>
-<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/av-min.js'></script>
-<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/Valine.min.js'></script>
+				</div>
+			</div>
+		</div>
 
-<script>
-  var valine = new Valine();
-  valine.init({
-    el: '.layout-comments',
-    appId: 'S40eoesUeqxPCxGzruxMGp2X-MdYXbMMI',
-    appKey: 'Y4EFOxOuF1pSfSBkuaHoCf5F',
-    notify: false,
-    verify: false,
-    visitor: true,
-    avatar: 'mp',
-    placeholder: '加入讨论...'
-  })
-</script>
-                        
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-lg-2 d-none d-lg-block">
-                      <div class="layout-post-sidebar">
-                        <div class="layout-sidebar-item">
-                          
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
-
-    	<div class="layout-footer">
+			<div class="layout-footer">
 
 		<div class="container">
 			<div class="row justify-content-lg-center">
@@ -473,8 +353,7 @@ show_date_time()
 		})();
 	</script>
 	
-
-  </div>
+	</div>
 </body>
 
 </html>

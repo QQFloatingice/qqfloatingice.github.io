@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.github.io/</id>
     <title>QQ floating ice</title>
-    <updated>2020-09-11T11:22:46.147Z</updated>
+    <updated>2020-09-11T11:25:42.161Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.github.io/"/>
     <link rel="self" href="https://qqfloatingice.github.io/atom.xml"/>
@@ -156,7 +156,7 @@ adb reboot
         </link>
         <updated>2020-08-22T13:07:40.000Z</updated>
         <content type="html"><![CDATA[<h3 id="声明原子弹制作有风险在制作过程中出现的问题与博主以及本博客无关对此博主-qq-floating-ice拥有最高解释权">声明，原子弹制作有风险，在制作过程中出现的问题，与博主以及本博客无关，对此博主 QQ Floating Ice拥有最高解释权</h3>
-<h4 id="转载自浙江某高中新生群实际来源于知乎">转载自浙江某高中新生群（实际来源于<a href="https://zhuanlan.zhihu.com/p/65259776">知乎</a>）</h4>
+<h4 id="转载自浙江某高中新生群实际来源于知乎">转载自<s>浙江某高中新生群</s>（实际来源于<a href="https://zhuanlan.zhihu.com/p/65259776">知乎</a>）</h4>
 <figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/08/22/mSZoqT41hV6QtJl.jpg" alt="批注 2020-08-22 222339.jpg" loading="lazy"></figure>
 <figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/08/22/JeoYWtN1PRD39bm.jpg" alt="批注 2020-08-22 222623.jpg" loading="lazy"></figure>
 <figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/08/22/QjFtAcEGD2UCd4S.jpg" alt="批注 2020-08-22 222642.jpg" loading="lazy"></figure>
@@ -189,7 +189,7 @@ adb reboot
 <h3 id="杀毒软件">杀毒软件</h3>
 <p>1.win10自带</p>
 <p>2.卡巴斯基</p>
-<h3 id="弹窗拦截"><sub>弹窗拦截</sub></h3>
+<h3 id="弹窗拦截"><s>弹窗拦截</s></h3>
 <p>sorry，如果没有流氓软件不需要，真想用联想自带不错</p>
 <h3 id="浏览器">浏览器</h3>
 <p>1.Firefox Developer Edition</p>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.github.io/</id>
     <title>QQ floating ice</title>
-    <updated>2020-10-05T04:10:23.300Z</updated>
+    <updated>2020-10-16T08:34:25.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.github.io/"/>
     <link rel="self" href="https://qqfloatingice.github.io/atom.xml"/>
@@ -54,6 +54,27 @@ show_date_time()
     <logo>https://qqfloatingice.github.io/images/avatar.png</logo>
     <icon>https://qqfloatingice.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[wallace-toolbox新版汉化]]></title>
+        <id>https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/</id>
+        <link href="https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/">
+        </link>
+        <updated>2020-10-16T08:34:10.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="版本号">版本号</h3>
+<p>wallace-toolbox-0.0.6（截图懒得换了</p>
+<h3 id="下载地址">下载地址</h3>
+<p><a href="https://pan-yz.chaoxing.com/share/info/cdd0b7c1afa630f5">0.0.5</a></p>
+<p>[0.0.6](链接: http://pan-yz.chaoxing.com/share/info/a8a3fd242dd24887)</p>
+<h3 id="更新说明">更新说明</h3>
+<h4 id="006">0.0.6</h4>
+<p>1.增加了移除所以的预装APP功能</p>
+<h4 id="005">0.0.5</h4>
+<p>1.增加了更改WiFi/l蓝牙 MAC地址功能</p>
+<p>2.没了</p>
+<p>3.。。。</p>
+<h5 id="本人是个英语学渣汉化如有错误请多多包函">本人是个英语学渣，汉化如有错误请多多包函</h5>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于4代魔改无限拉倍频的一些杂谈]]></title>
         <id>https://qqfloatingice.github.io/post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan/</id>
@@ -282,23 +303,6 @@ adb reboot
 <h3 id="202087更新">2020/8/7更新</h3>
 <p>好了，拿回来敲了一下，然后就润轴换轴，润完换完手感感觉海星，就是有一点必须吐槽，这键盘吗，没有delete！！！这个问题我目前还没法解决，要么等驱动更新（基本不可能）要么有空折腾下。。。</p>
 <p>好吧，我吐槽错了，不过键帽也有锅，delete是fn+backspace键。。。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[wallace-toolbox新版汉化]]></title>
-        <id>https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/</id>
-        <link href="https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/">
-        </link>
-        <updated>2020-07-27T06:57:27.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="版本号">版本号</h3>
-<p>wallace-toolbox-0.0.5</p>
-<h3 id="下载地址">下载地址</h3>
-<p><a href="https://pan-yz.chaoxing.com/share/info/cdd0b7c1afa630f5">链接</a></p>
-<h3 id="更新说明">更新说明</h3>
-<p>1.增加了WiFi/BT MAC地址功能</p>
-<p>2.没了</p>
-<p>3.。。。</p>
-<h5 id="本人是个英语学渣汉化如有错误请多多包函">本人是个英语学渣，汉化如有错误请多多包函</h5>
 ]]></content>
     </entry>
     <entry>

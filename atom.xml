@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://qqfloatingice.github.io/</id>
+    <id>http://localhost:4000</id>
     <title>QQ floating ice</title>
-    <updated>2020-10-17T14:19:25.965Z</updated>
+    <updated>2020-10-17T14:20:58.304Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://qqfloatingice.github.io/"/>
-    <link rel="self" href="https://qqfloatingice.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -51,13 +51,13 @@ show_date_time()
 &lt;/html&gt;
 
 </subtitle>
-    <logo>https://qqfloatingice.github.io/images/avatar.png</logo>
-    <icon>https://qqfloatingice.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2020, QQ floating ice</rights>
     <entry>
         <title type="html"><![CDATA[wallace-toolbox新版汉化]]></title>
-        <id>https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/</id>
-        <link href="https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/">
+        <id>http://localhost:4000/post/wallace-toolbox-xin-ban-han-hua/</id>
+        <link href="http://localhost:4000/post/wallace-toolbox-xin-ban-han-hua/">
         </link>
         <updated>2020-10-16T08:34:10.000Z</updated>
         <content type="html"><![CDATA[<h3 id="版本号">版本号</h3>
@@ -77,8 +77,8 @@ show_date_time()
     </entry>
     <entry>
         <title type="html"><![CDATA[关于4代魔改无限拉倍频的一些杂谈]]></title>
-        <id>https://qqfloatingice.github.io/post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan/</id>
-        <link href="https://qqfloatingice.github.io/post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan/">
+        <id>http://localhost:4000/post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan/</id>
+        <link href="http://localhost:4000/post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan/">
         </link>
         <updated>2020-09-27T01:01:48.000Z</updated>
         <content type="html"><![CDATA[<p>超频有风险，魔改需谨慎，本人不对本内容产生的问题承担任何责任</p>
@@ -132,8 +132,8 @@ http://valid.x86.fr/6n50n4<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[佳明645一周体验感受]]></title>
-        <id>https://qqfloatingice.github.io/post/jia-ming-645-yi-zhou-ti-yan-gan-shou/</id>
-        <link href="https://qqfloatingice.github.io/post/jia-ming-645-yi-zhou-ti-yan-gan-shou/">
+        <id>http://localhost:4000/post/jia-ming-645-yi-zhou-ti-yan-gan-shou/</id>
+        <link href="http://localhost:4000/post/jia-ming-645-yi-zhou-ti-yan-gan-shou/">
         </link>
         <updated>2020-09-06T07:04:04.000Z</updated>
         <content type="html"><![CDATA[<h4 id="前排提示这是一个迟到很久的体验博客这块表好像是去年这个时候到手的吧">前排提示，这是一个迟到很久的体验博客，这块表好像是去年这个时候到手的吧。。。</h4>
@@ -187,8 +187,8 @@ http://valid.x86.fr/6n50n4<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[关于我又一个哥哥出国留学的事]]></title>
-        <id>https://qqfloatingice.github.io/post/guan-yu-wo-you-yi-ge-ge-ge-chu-guo-liu-xue-de-shi/</id>
-        <link href="https://qqfloatingice.github.io/post/guan-yu-wo-you-yi-ge-ge-ge-chu-guo-liu-xue-de-shi/">
+        <id>http://localhost:4000/post/guan-yu-wo-you-yi-ge-ge-ge-chu-guo-liu-xue-de-shi/</id>
+        <link href="http://localhost:4000/post/guan-yu-wo-you-yi-ge-ge-ge-chu-guo-liu-xue-de-shi/">
         </link>
         <updated>2020-09-06T03:05:25.000Z</updated>
         <content type="html"><![CDATA[<h1 id="又双叒叕出去一个">又双叒叕出去一个</h1>
@@ -197,8 +197,8 @@ http://valid.x86.fr/6n50n4<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[如何在kaios原生系统内使用自带表情]]></title>
-        <id>https://qqfloatingice.github.io/post/ru-he-zai-kaios-yuan-sheng-xi-tong-nei-shi-yong-zi-dai-biao-qing/</id>
-        <link href="https://qqfloatingice.github.io/post/ru-he-zai-kaios-yuan-sheng-xi-tong-nei-shi-yong-zi-dai-biao-qing/">
+        <id>http://localhost:4000/post/ru-he-zai-kaios-yuan-sheng-xi-tong-nei-shi-yong-zi-dai-biao-qing/</id>
+        <link href="http://localhost:4000/post/ru-he-zai-kaios-yuan-sheng-xi-tong-nei-shi-yong-zi-dai-biao-qing/">
         </link>
         <updated>2020-08-30T01:07:34.000Z</updated>
         <content type="html"><![CDATA[<h3 id="本教程所提及内容可能对你的kaios设备造成伤害博主与本站不对所造成的伤害负责">本教程所提及内容可能对你的kaios设备造成伤害，博主与本站不对所造成的伤害负责</h3>
@@ -227,8 +227,8 @@ adb reboot
     </entry>
     <entry>
         <title type="html"><![CDATA[常用软件推荐]]></title>
-        <id>https://qqfloatingice.github.io/post/chang-yong-ruan-jian-tui-jian/</id>
-        <link href="https://qqfloatingice.github.io/post/chang-yong-ruan-jian-tui-jian/">
+        <id>http://localhost:4000/post/chang-yong-ruan-jian-tui-jian/</id>
+        <link href="http://localhost:4000/post/chang-yong-ruan-jian-tui-jian/">
         </link>
         <updated>2020-08-13T01:14:54.000Z</updated>
         <content type="html"><![CDATA[<p>本文仅代表个人观点，不喜勿喷</p>
@@ -268,8 +268,8 @@ adb reboot
     </entry>
     <entry>
         <title type="html"><![CDATA[【噩耗】本站回迁失败]]></title>
-        <id>https://qqfloatingice.github.io/post/e-hao-ben-zhan-hui-qian-shi-bai/</id>
-        <link href="https://qqfloatingice.github.io/post/e-hao-ben-zhan-hui-qian-shi-bai/">
+        <id>http://localhost:4000/post/e-hao-ben-zhan-hui-qian-shi-bai/</id>
+        <link href="http://localhost:4000/post/e-hao-ben-zhan-hui-qian-shi-bai/">
         </link>
         <updated>2020-08-10T05:40:00.000Z</updated>
         <content type="html"><![CDATA[<p>由于某些特殊原因，我的个人境外服务器可能永久失效，本来想吧域名换过来的，但是这个二级域名已经被各大搜索引擎收录（我本来的域名都没有被百度收录。。。）所以，本站在往后三年内可能不会回迁（换成动态站倒是有可能）就是这样了。。。</p>
@@ -278,8 +278,8 @@ adb reboot
     </entry>
     <entry>
         <title type="html"><![CDATA[迷你键盘杂谈]]></title>
-        <id>https://qqfloatingice.github.io/post/mi-ni-jian-pan-za-tan/</id>
-        <link href="https://qqfloatingice.github.io/post/mi-ni-jian-pan-za-tan/">
+        <id>http://localhost:4000/post/mi-ni-jian-pan-za-tan/</id>
+        <link href="http://localhost:4000/post/mi-ni-jian-pan-za-tan/">
         </link>
         <updated>2020-08-06T14:41:38.000Z</updated>
         <summary type="html"><![CDATA[<p>其实，也没什么好谈的，就是我换了个为了更好的用触控板，更好的码字，换了个61键的小键盘，把我原来贼船的黑轴变成游戏专用而已。。。如果你有兴趣，请往下读。。。。</p>
@@ -307,8 +307,8 @@ adb reboot
     </entry>
     <entry>
         <title type="html"><![CDATA[【喜讯】本辣鸡博客已被各大搜索引擎收录]]></title>
-        <id>https://qqfloatingice.github.io/post/xi-xun-ben-la-ji-bo-ke-yi-bei-ge-da-sou-suo-yin-qing-shou-lu/</id>
-        <link href="https://qqfloatingice.github.io/post/xi-xun-ben-la-ji-bo-ke-yi-bei-ge-da-sou-suo-yin-qing-shou-lu/">
+        <id>http://localhost:4000/post/xi-xun-ben-la-ji-bo-ke-yi-bei-ge-da-sou-suo-yin-qing-shou-lu/</id>
+        <link href="http://localhost:4000/post/xi-xun-ben-la-ji-bo-ke-yi-bei-ge-da-sou-suo-yin-qing-shou-lu/">
         </link>
         <updated>2020-07-22T15:12:18.000Z</updated>
         <content type="html"><![CDATA[<p>百度能收录我是真的没想到。。。</p>
@@ -316,8 +316,8 @@ adb reboot
     </entry>
     <entry>
         <title type="html"><![CDATA[经典P4大赏]]></title>
-        <id>https://qqfloatingice.github.io/post/jing-dian-p4-da-shang/</id>
-        <link href="https://qqfloatingice.github.io/post/jing-dian-p4-da-shang/">
+        <id>http://localhost:4000/post/jing-dian-p4-da-shang/</id>
+        <link href="http://localhost:4000/post/jing-dian-p4-da-shang/">
         </link>
         <updated>2020-07-17T00:29:38.000Z</updated>
         <content type="html"><![CDATA[<h4 id="等了好几天的快递最后一块p4唯一支持64位的p4到了终于又可以水一篇了手动滑稽">等了好几天的快递，最后一块P4（唯一支持64位的P4）到了，终于又可以水一篇了（手动滑稽）</h4>

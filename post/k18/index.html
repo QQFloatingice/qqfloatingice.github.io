@@ -77,7 +77,7 @@ show_date_time()
 						<div class="logo">
 							<a href="https://qqfloatingice.github.io/">
 								<img class="logo"
-									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1602903495428"
+									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1602944357383"
 									alt="">
 							</a>
 						</div>
@@ -124,7 +124,7 @@ show_date_time()
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1602903495428" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1602944357383" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -203,28 +203,32 @@ show_date_time()
 <p>之前那个教程过于久远，于是决定重新编写新的教程。<br>
 考虑到之后上了大学以后就很少再玩KaiOS了，这可能将是我倒数第二篇关于KaiOS的文章。<br>
 最后一篇是关于KaiOS手机如何和谐上网。</p>
-<p>#1.导读<br>
-<a href="https://gerda.tech/">GerdaOS</a>是一个第三方kaiOS ROM，这个ROM支持截屏、文件管理、安装第三方软件、开发者选项、IMEI修改、TTL修改、LTE频段解锁等，并且加入了广告屏蔽等功能。<br>
+<h1 id="1导读">1.导读</h1>
+<p><a href="https://gerda.tech/">GerdaOS</a>是一个第三方kaiOS ROM，这个ROM支持截屏、文件管理、安装第三方软件、开发者选项、IMEI修改、TTL修改、LTE频段解锁等，并且加入了广告屏蔽等功能。<br>
 他们说：“Install what you want, not they.”意味着你可以最大限度地定制你的香蕉机，而不是受HMD，kaiOS甚至阿三的jio摆布。<br>
-目前这个系统处在alpha阶段，可能会有未知的风险。刷机有风险，操作需谨慎。请务必备份好您的所有数据。这会删除您的所有数据。这一操作将导致您失去来自HMD官方的OTA更新。本人不对本内容产生的问题承担任何责任。<br>
-#2.系统要求</p>
+目前这个系统处在alpha阶段，可能会有未知的风险。刷机有风险，操作需谨慎。请务必备份好您的所有数据。这会删除您的所有数据。这一操作将导致您失去来自HMD官方的OTA更新。本人不对本内容产生的问题承担任何责任。</p>
+<h1 id="2系统要求">2.系统要求</h1>
 <ul>
 <li>一部正品Nokia 8110 4G香蕉机。华强北勿扰。</li>
 <li>一台电脑。最好运行的是Mac或者Linux系统。</li>
 <li>手机固件需要先升级到V12以上。</li>
-<li>一张microSD卡。可用空间需至少5GB。<br>
-#3.下载所需文件：</li>
+<li>一张microSD卡。可用空间需至少5GB。</li>
+</ul>
+<h1 id="3下载所需文件">3.下载所需文件：</h1>
+<ul>
 <li><strong>v13recovery_gerdaos.img</strong> Recovery镜像文件，重命名为recovery.img并存放在存储卡根目录下。</li>
 <li><strong>adb工具包</strong> <a href="https://www.coolapk.com/feed/16691768?shareKey=ODAzYjU2ZmQxOWJlNWU3Mzk4MzI~&amp;shareUid=1998781&amp;shareFrom=com.coolapk.app_2.5">请移步此处获得安装教程。</a></li>
 <li><strong>Wallace</strong> 临时root工具。请<a href="https://www.heppy.wang/archives/94/">点此</a>下载并放在SD卡根目录。</li>
 <li><strong>Dumpall.zip</strong> 备份工具，存放在存储卡根目录下。</li>
 <li><strong>gerda-install-221edb8.zip</strong> GerdaOS刷机包。存放在存储卡根目录下。</li>
 <li><strong>驱动</strong> mac和linux及原版Win10无需安装驱动，<a href="https://www.jb51.net/softs/668696.html">Windows请参考这里</a>。</li>
-<li><strong>OneKeyOmniSD</strong> OmniSD一键安装器。<a href="https://www.heppy.wang/archives/94/">请点此下载。</a><br>
-所有文件已经以百度网盘分享链接的形式在文章末尾贴出。<br>
-#4.重置提权<br>
-请参考本站文章 https://www.heppy.wang/archives/94/ 。<br>
-#5.临时root</li>
+<li><strong>OneKeyOmniSD</strong> OmniSD一键安装器。<a href="https://qqfloatingice.github.io/post/k8/">请点此下载。</a><br>
+所有文件已经以百度网盘分享链接的形式在文章末尾贴出。</li>
+</ul>
+<h1 id="4重置提权">4.重置提权</h1>
+<p>请参考本站文章 https://www.heppy.wang/archives/94/ 。</p>
+<h1 id="5临时root">5.临时root</h1>
+<ul>
 <li>打开刚刚安装的OmniSD，选择Wallace Toolbox安装包安装。</li>
 <li>安装完成后，启动Wallace Toolbox。</li>
 <li>按1进行临时root，完成后关闭Wallace Toolbox。</li>
@@ -246,8 +250,8 @@ mount -o remount,ro /system
 exit
 reboot
 </code></pre>
-<p>此时手机重启后正常进入系统，recovery降级完成。您可以重启至recovery（命令adb reboot recovery或者关机状态下同时按住Power+上键），如果首行显示“Gerda Recovery”即为安装成功。<br>
-#7.备份原有操作系统</p>
+<p>此时手机重启后正常进入系统，recovery降级完成。您可以重启至recovery（命令adb reboot recovery或者关机状态下同时按住Power+上键），如果首行显示“Gerda Recovery”即为安装成功。</p>
+<h1 id="7备份原有操作系统">7.备份原有操作系统</h1>
 <ul>
 <li>重启进入recovery（方法上面已经提到，这里不再赘述）</li>
 <li>选择Mount /system（上下键选择，返回键确认）</li>
@@ -255,8 +259,10 @@ reboot
 <li>选择dumpall.zip</li>
 <li>稍等一会</li>
 <li>在recovery重新弹出菜单后选择reboot system now重启至系统。<br>
-至此，你的当前系统已经备份到存储卡的DUMPS文件夹下。<br>
-#8.刷入刷机包</li>
+至此，你的当前系统已经备份到存储卡的DUMPS文件夹下。</li>
+</ul>
+<h1 id="8刷入刷机包">8.刷入刷机包</h1>
+<ul>
 <li>重启进入recovery</li>
 <li>选择Mount /system</li>
 <li>选择Apply update from SD card</li>
@@ -265,8 +271,10 @@ reboot
 <li>选择Wipe data/factory reset双清</li>
 <li>选Yes</li>
 <li>选择reboot system now重启至系统。<br>
-至此，如果开机界面变为一只Linux企鹅和GerdaOS图标，即为刷机成功。您可以体验您的新系统了。您可以通过自带的文件管理器安装第三方软件了。<br>
-#9.文件下载</li>
+至此，如果开机界面变为一只Linux企鹅和GerdaOS图标，即为刷机成功。您可以体验您的新系统了。您可以通过自带的文件管理器安装第三方软件了。</li>
+</ul>
+<h1 id="9文件下载">9.文件下载</h1>
+<ul>
 <li>gerda-install-221edb8.zip 链接：https://pan.baidu.com/s/1wAE8IxtC63qQOujLVmFFWw 提取码：hcmu</li>
 <li>其他所需文件：https://www.lanzous.com/b623501/ 密码：2xra</li>
 </ul>
@@ -333,6 +341,14 @@ reboot
 <li><a href="#%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E8%BD%AC%E8%BD%BD%E8%87%AAinsorasky">以下内容转载自inSoraSky</a></li>
 </ul>
 </li>
+<li><a href="#1%E5%AF%BC%E8%AF%BB">1.导读</a></li>
+<li><a href="#2%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82">2.系统要求</a></li>
+<li><a href="#3%E4%B8%8B%E8%BD%BD%E6%89%80%E9%9C%80%E6%96%87%E4%BB%B6">3.下载所需文件：</a></li>
+<li><a href="#4%E9%87%8D%E7%BD%AE%E6%8F%90%E6%9D%83">4.重置提权</a></li>
+<li><a href="#5%E4%B8%B4%E6%97%B6root">5.临时root</a></li>
+<li><a href="#7%E5%A4%87%E4%BB%BD%E5%8E%9F%E6%9C%89%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">7.备份原有操作系统</a></li>
+<li><a href="#8%E5%88%B7%E5%85%A5%E5%88%B7%E6%9C%BA%E5%8C%85">8.刷入刷机包</a></li>
+<li><a href="#9%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD">9.文件下载</a></li>
 </ul>
 
                         </div>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>【转载】如何让香蕉开车开的更快——Nokia 8110 4G 提速小技巧 - QQ floating ice</title>
+<title>227第250天纪念日的一些随想 - QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -186,92 +186,32 @@ show_date_time()
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">【转载】如何让香蕉开车开的更快——Nokia 8110 4G 提速小技巧</h1>
+                          <h1 class="layout-post-title">227第250天纪念日的一些随想</h1>
                           <div class="layout-post-meta">
                             <div class="item">
                               
                             </div>
                             <div class="item">
-                              <span>2020-07-15</span>
+                              <span>2020-11-02</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <h2 id="以下内容转载自insorasky">以下内容转载自<a href="https://www.sorasky.in/">inSoraSky</a></h2>
-<p>感谢Luxferre、speeduploop等大神提供的各种小技巧。在应用这些小技巧之前，请先root你的香蕉机，并安装好adb工具包和相关驱动。<br>
-###1、解除CPU限制</p>
-<ul>
-<li>运行 adb pull /data/opt/init （如果提示文件不存在，就手动在当前目录下创建名为init的文件【没有扩展名！】并输入首行 #!/system/bin/sh）</li>
-<li>使用notepad++等文本编辑器（建议不用记事本）将以下代码加入当前目录下的init文件的首行以后：</li>
-</ul>
-<pre><code>echo '96'      &gt; /sys/devices/system/cpu/cpufreq/interactive/target_loads
-echo '1094400' &gt; /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-echo '24'      &gt; /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-echo '0'       &gt; /sys/module/msm_thermal/core_control/enabled
-</code></pre>
-<ul>
-<li>保存，运行：</li>
-</ul>
-<pre><code>adb push init /data/opt/init
-adb shell
-chmod +x /data/opt/init
-exit
-adb reboot
-</code></pre>
-<ul>
-<li>等待手机重启即可。<br>
-2、启用双卡显示4G（实际4G+2G，硬件硬伤）：运行以下：</li>
-</ul>
-<pre><code>adb shell setprop persist.moz.ril.0.network_types gsm,wcdma,lte
-adb shell setprop persist.moz.ril.1.network_types gsm,wcdma,lte
-adb reboot
-</code></pre>
-<p>3、禁用SIM2：</p>
-<pre><code>#禁用SIM2
-adb shell setprop persist.radio.multisim.config none
-adb reboot
-
-#恢复SIM2
-adb shell setprop persist.radio.multisim.config dsds
-adb shell setprop persist.moz.ril.0.network_types gsm,wcdma,lte
-adb shell setprop persist.moz.ril.1.network_types gsm,wcdma,lte
-adb reboot
-</code></pre>
-<p>4、禁用网络限制</p>
-<pre><code>adb shell setprop persist.net.tcp.buffersize.wifi 524288,1048576,2097152,524288,1048576,2097152
-adb shell setprop persist.net.tcp.buffersize.umts 6144,87380,1048576,6144,87380,524288
-adb shell setprop persist.net.tcp.buffersize.gprs 6144,87380,1048576,6144,87380,524288
-adb shell setprop persist.net.tcp.buffersize.edge 6144,87380,524288,6144,16384,262144
-adb shell setprop persist.net.tcp.buffersize.hspa 6144,87380,524288,6144,16384,262144
-adb shell setprop persist.net.tcp.buffersize.lte 524288,1048576,2097152,524288,1048576,2097152
-adb shell setprop persist.net.tcp.buffersize.evdo 6144,87380,1048576,6144,87380,1048576
-adb reboot
-</code></pre>
-<p>5、启用虚拟内存<br>
-此操作经测试发现会拖慢手机速度（主要是存储器实在太烂了），请谨慎使用。</p>
-<ul>
-<li>创建虚拟内存文件（默认512M，即512M RAM+512M虚拟内存）</li>
-</ul>
-<pre><code>adb shell
-mount -o remount,rw /system
-mount -o remount,rw /data
-busybox mkdir /data/opt
-busybox dd if=/dev/zero of=/data/opt/swapfile bs=1024 count=524288
-busybox mkswap /data/opt/swapfile
-exit
-</code></pre>
-<ul>
-<li>按1的方式导出init文件</li>
-<li>首行后加入以下两行：</li>
-</ul>
-<pre><code>swapon /data/opt/swapfile
-swapoff /dev/block/zram0
-</code></pre>
-<ul>
-<li>按1的方式导入init文件并重启。</li>
-</ul>
+                            <p class="with-img"><img src="https://i.loli.net/2020/10/30/dRJU7v18hB2CFEL.jpg"
+                                class="attachment-full size-full wp-post-image" alt="227第250天纪念日的一些随想" /></p>
+                            
+                            <p>227已经过去250天了</p>
+<!-- more -->
+<p>在这250天里，我对当时的一些行为做了一些反思，发现其实我们的一些言论并不是理性的，我们不应该因为xz的脑残粉去无脑黑xz，为黑而黑也没什么意义，当然xz的无所作为是加剧了事态的严重性，导致xz脑残粉“【你们欺负肖战哥哥，我们就让整个平台爆炸】【除了lofter，AO3还有什么平台，你们说一个我们封一个】【如何举报lof步骤详解】”的行为的出现，导致我们的部分平台被bang。。。当时仔细想来，问题的本院还是在NC粉问题上。</p>
+<p>在这250天里，我大概是接触了不少于50位xz粉，大部分其实都还是正常的【以至于我自爆身份的时候对我反应还不是很大（笑，我还是太年轻。。。 只有少部分害群之马表现的和个ZZ一样于是就出现了以下言论“谁会喜欢一个227”；“TA被针对是活该”对于这种NC粉，我只想说：”宁，配吗？“</p>
+<p>关于NC粉这个问题，据说一直是某圈的必然问题，这件事不在xz身上爆发也迟早会在别人身上爆发，所以，虽然但是，我们其实都是受害者。。。</p>
+<p>在这里，我对这250天里我再传的部分不良影响，以及那些被我误喷的人们道歉，也感谢部分xz粉丝对我的包容。</p>
+<p>此外，在这里，我还要对部分某圈人做一个提醒：“不要把那些ex的东西放出来了，搞臭一个圈够了，核都有不扩撒条约，你们也应该有个NC不扩撒条约吧。。。”</p>
+<p>（这第250天纪念日把我也整的有点250，写的有点乱，将就着看吧</p>
+<p>P.s.<br>
+<a href="https://qqfloatingice.github.io/post/fq">关于某圈的危害</a></p>
 
                           </div>
                         </div>
@@ -289,8 +229,8 @@ swapoff /dev/block/zram0
 
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/k4/" class="leancloud-visitors view"
-                              data-flag-title="【转载】如何让香蕉开车开的更快——Nokia 8110 4G 提速小技巧">
+                            <div id="/post/227-di-250-tian-ji-nian-ri-de-yi-xie-sui-xiang/" class="leancloud-visitors view"
+                              data-flag-title="227第250天纪念日的一些随想">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -299,6 +239,35 @@ swapoff /dev/block/zram0
 
                         <div class="layout-post-navigation">
                           <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://qqfloatingice.github.io/post/2/" class="title">
+                                      <h4>QQ foating ice</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>下一篇</span></div>
+                                  <div class="item">2020-10-17</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="https://qqfloatingice.github.io/post/2/"
+                                    style="background-image: url('https://i.loli.net/2020/09/11/WLqEFixXztbs6uf.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
                             
                           </div>
                         </div>
@@ -329,14 +298,7 @@ swapoff /dev/block/zram0
                     <div class="col-12 col-lg-2 d-none d-lg-block">
                       <div class="layout-post-sidebar">
                         <div class="layout-sidebar-item">
-                          <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E8%BD%AC%E8%BD%BD%E8%87%AAinsorasky">以下内容转载自inSoraSky</a></li>
-</ul>
-</li>
-</ul>
-
+                          
                         </div>
                       </div>
                     </div>

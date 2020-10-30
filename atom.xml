@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.github.io/</id>
     <title>QQ floating ice</title>
-    <updated>2020-10-17T14:22:38.945Z</updated>
+    <updated>2020-10-30T05:59:31.382Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.github.io/"/>
     <link rel="self" href="https://qqfloatingice.github.io/atom.xml"/>
@@ -54,6 +54,26 @@ show_date_time()
     <logo>https://qqfloatingice.github.io/images/avatar.png</logo>
     <icon>https://qqfloatingice.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[227第250天纪念日的一些随想]]></title>
+        <id>https://qqfloatingice.github.io/post/227-di-250-tian-ji-nian-ri-de-yi-xie-sui-xiang/</id>
+        <link href="https://qqfloatingice.github.io/post/227-di-250-tian-ji-nian-ri-de-yi-xie-sui-xiang/">
+        </link>
+        <updated>2020-11-01T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>227已经过去250天了</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>227已经过去250天了</p>
+<!-- more -->
+<p>在这250天里，我对当时的一些行为做了一些反思，发现其实我们的一些言论并不是理性的，我们不应该因为xz的脑残粉去无脑黑xz，为黑而黑也没什么意义，当然xz的无所作为是加剧了事态的严重性，导致xz脑残粉“【你们欺负肖战哥哥，我们就让整个平台爆炸】【除了lofter，AO3还有什么平台，你们说一个我们封一个】【如何举报lof步骤详解】”的行为的出现，导致我们的部分平台被bang。。。当时仔细想来，问题的本院还是在NC粉问题上。</p>
+<p>在这250天里，我大概是接触了不少于50位xz粉，大部分其实都还是正常的【以至于我自爆身份的时候对我反应还不是很大（笑，我还是太年轻。。。 只有少部分害群之马表现的和个ZZ一样于是就出现了以下言论“谁会喜欢一个227”；“TA被针对是活该”对于这种NC粉，我只想说：”宁，配吗？“</p>
+<p>关于NC粉这个问题，据说一直是某圈的必然问题，这件事不在xz身上爆发也迟早会在别人身上爆发，所以，虽然但是，我们其实都是受害者。。。</p>
+<p>在这里，我对这250天里我再传的部分不良影响，以及那些被我误喷的人们道歉，也感谢部分xz粉丝对我的包容。</p>
+<p>此外，在这里，我还要对部分某圈人做一个提醒：“不要把那些ex的东西放出来了，搞臭一个圈够了，核都有不扩撒条约，你们也应该有个NC不扩撒条约吧。。。”</p>
+<p>（这第250天纪念日把我也整的有点250，写的有点乱，将就着看吧</p>
+<p>P.s.<br>
+<a href="https://qqfloatingice.github.io/post/fq">关于某圈的危害</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[QQ foating ice]]></title>
         <id>https://qqfloatingice.github.io/post/2/</id>
@@ -387,15 +407,6 @@ adb reboot
 <h3 id="202087更新">2020/8/7更新</h3>
 <p>好了，拿回来敲了一下，然后就润轴换轴，润完换完手感感觉海星，就是有一点必须吐槽，这键盘吗，没有delete！！！这个问题我目前还没法解决，要么等驱动更新（基本不可能）要么有空折腾下。。。</p>
 <p>好吧，我吐槽错了，不过键帽也有锅，delete是fn+backspace键。。。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【喜讯】本辣鸡博客已被各大搜索引擎收录]]></title>
-        <id>https://qqfloatingice.github.io/post/xi-xun-ben-la-ji-bo-ke-yi-bei-ge-da-sou-suo-yin-qing-shou-lu/</id>
-        <link href="https://qqfloatingice.github.io/post/xi-xun-ben-la-ji-bo-ke-yi-bei-ge-da-sou-suo-yin-qing-shou-lu/">
-        </link>
-        <updated>2020-07-22T15:12:18.000Z</updated>
-        <content type="html"><![CDATA[<p>百度能收录我是真的没想到。。。</p>
 ]]></content>
     </entry>
 </feed>

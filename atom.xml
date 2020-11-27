@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.github.io/</id>
     <title>QQ floating ice</title>
-    <updated>2020-11-27T12:15:04.950Z</updated>
+    <updated>2020-11-27T13:35:28.671Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.github.io/"/>
     <link rel="self" href="https://qqfloatingice.github.io/atom.xml"/>
@@ -54,6 +54,14 @@ show_date_time()
     <logo>https://qqfloatingice.github.io/images/avatar.png</logo>
     <icon>https://qqfloatingice.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[做个问卷吧，球球了！！！]]></title>
+        <id>https://qqfloatingice.github.io/post/zuo-ge-wen-juan-ba-qiu-qiu-liao/</id>
+        <link href="https://qqfloatingice.github.io/post/zuo-ge-wen-juan-ba-qiu-qiu-liao/">
+        </link>
+        <updated>2020-11-27T13:29:25.000Z</updated>
+        <content type="html"><![CDATA[<script type='text/javascript' src='https://www.wjx.cn/handler/jqemed.ashx?activity=99075233&width=760&source=iframe'></script>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[227第250天纪念日的一些随想]]></title>
         <id>https://qqfloatingice.github.io/post/227-di-250-tian-ji-nian-ri-de-yi-xie-sui-xiang/</id>
@@ -378,35 +386,6 @@ adb reboot
         <updated>2020-08-10T05:40:00.000Z</updated>
         <content type="html"><![CDATA[<p>由于某些特殊原因，我的个人境外服务器可能永久失效，本来想吧域名换过来的，但是这个二级域名已经被各大搜索引擎收录（我本来的域名都没有被百度收录。。。）所以，本站在往后三年内可能不会回迁（换成动态站倒是有可能）就是这样了。。。</p>
 <p>希望Gitpage能撑下去。。。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[迷你键盘杂谈]]></title>
-        <id>https://qqfloatingice.github.io/post/mi-ni-jian-pan-za-tan/</id>
-        <link href="https://qqfloatingice.github.io/post/mi-ni-jian-pan-za-tan/">
-        </link>
-        <updated>2020-08-06T14:41:38.000Z</updated>
-        <summary type="html"><![CDATA[<p>其实，也没什么好谈的，就是我换了个为了更好的用触控板，更好的码字，换了个61键的小键盘，把我原来贼船的黑轴变成游戏专用而已。。。如果你有兴趣，请往下读。。。。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>其实，也没什么好谈的，就是我换了个为了更好的用触控板，更好的码字，换了个61键的小键盘，把我原来贼船的黑轴变成游戏专用而已。。。如果你有兴趣，请往下读。。。。</p>
-<!-- more --> 
-<p>其实，我烦那个贼船的黑轴有一段时间了，由于某些原因，我码字的量有较大增加，然后，就经常敲字敲敲码敲打手疼（不过打游戏倒是挺香的）因为后来开学之后回到学校这边住，主机没带过来，一直用二奶E490和一台2017年的X1 yoga也就没怎么管这件事。</p>
-<p><a href="https://i.loli.net/2020/08/07/oRXcu3pJC7iT8Zx.jpg"></a></p>
-<p>后来，我因为用了半年的触控板，感觉被触控板绑架了，买了个秒控板来，然后因为对笔记本键盘的适应，我有种强烈的愿望想把触控板放在空格底下，然后因为我那块贼船太长，就很别扭，于是打算换个小键盘。。。。</p>
-<p>最开始我想到的是TP的薄膜键盘</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/08/07/rzYh4Pp5dU7ibqa.jpg" alt="" loading="lazy"></figure>
-<p>因为下边框的问题，买了看了下就退了。。。</p>
-<p>然后我有看了下TP的其他键盘，感觉2525周年纪念的海星，但是。。。限量发售，现在早就没了，买二手，又贵又。。。。。而且青轴我也受不了（太tm吵</p>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/08/07/o8UTpI6j1OaYt2E.jpg" alt="" loading="lazy"></figure>
-<p>然后最后我只能看看tb，然后给我推了这玩意</p>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/08/06/fwBGg8x23obvX4s.jpg" alt="" loading="lazy"></figure>
-<p>看看外观和键帽还不错，还有个双模，只是轴体。。。</p>
-<p>凯华还算过得去，但是买回来肯定要自己润滑，而且，回车，空格那几个大键肯定自己换别的颜色轴体。。。</p>
-<p>所以我最后买了这个，不过价格还算合理，手感。。。慢慢看玄学吧。。。</p>
-<p>ps.快递已经到了，我懒得拿，明天再说</p>
-<h3 id="202087更新">2020/8/7更新</h3>
-<p>好了，拿回来敲了一下，然后就润轴换轴，润完换完手感感觉海星，就是有一点必须吐槽，这键盘吗，没有delete！！！这个问题我目前还没法解决，要么等驱动更新（基本不可能）要么有空折腾下。。。</p>
-<p>好吧，我吐槽错了，不过键帽也有锅，delete是fn+backspace键。。。</p>
 ]]></content>
     </entry>
 </feed>

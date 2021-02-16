@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.github.io/</id>
     <title>QQ floating ice</title>
-    <updated>2021-02-16T15:16:08.480Z</updated>
+    <updated>2021-02-16T15:22:25.941Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.github.io/"/>
     <link rel="self" href="https://qqfloatingice.github.io/atom.xml"/>
@@ -54,6 +54,19 @@ show_date_time()
     <logo>https://qqfloatingice.github.io/images/avatar.png</logo>
     <icon>https://qqfloatingice.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[终于，我修好了评论提醒]]></title>
+        <id>https://qqfloatingice.github.io/post/zhong-yu-wo-xiu-hao-liao-ping-lun-ti-xing/</id>
+        <link href="https://qqfloatingice.github.io/post/zhong-yu-wo-xiu-hao-liao-ping-lun-ti-xing/">
+        </link>
+        <updated>2021-02-16T15:18:08.000Z</updated>
+        <content type="html"><![CDATA[<p>emmm</p>
+<p>不知何时，valine自带的评论提醒挂了，还好，有第三方及时补上（我没及时更新。。。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/02/16/TmCIWJ1oOU4DQHb.jpg" alt="屏幕截图 2021-02-16 231945.jpg" loading="lazy"></figure>
+<p>不过，现在能用就好了吗。。。</p>
+<p>这次，应该是修好了。。。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[美国反对美国]]></title>
         <id>https://qqfloatingice.github.io/post/mei-guo-fan-dui-mei-guo/</id>
@@ -2478,47 +2491,6 @@ http://valid.x86.fr/6n50n4<br>
 <pre><code>adb push webapps.json /data/local/webapps/
 adb reboot
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[常用软件推荐]]></title>
-        <id>https://qqfloatingice.github.io/post/chang-yong-ruan-jian-tui-jian/</id>
-        <link href="https://qqfloatingice.github.io/post/chang-yong-ruan-jian-tui-jian/">
-        </link>
-        <updated>2020-08-13T01:14:54.000Z</updated>
-        <content type="html"><![CDATA[<p>本文仅代表个人观点，不喜勿喷</p>
-<p>由于现在国内的软件环境，流氓软件层出不穷，这里整理了一些还算良心的软件，足够日常使用。</p>
-<h1 id="如果在百度的各种软件站下载请不要用高速下载">如果在百度的各种软件站下载，请不要用高速下载</h1>
-<h3 id="压缩解压缩">压缩，解压缩</h3>
-<p>7-zip File Manager</p>
-<h3 id="杀毒软件">杀毒软件</h3>
-<p>1.win10自带</p>
-<p>2.卡巴斯基</p>
-<h3 id="弹窗拦截"><s>弹窗拦截</s></h3>
-<p>sorry，如果没有流氓软件不需要，真想用联想自带不错</p>
-<h3 id="浏览器">浏览器</h3>
-<p>1.Firefox Developer Edition</p>
-<p>2.Chrome</p>
-<p>3.Microsoft Edge</p>
-<h3 id="常用工具">常用工具</h3>
-<p>图吧工具箱2020</p>
-<p>utools</p>
-<p>OfficeBox</p>
-<h3 id="桌面整理">桌面整理</h3>
-<p>DeskGo（不要下全家桶）</p>
-<h3 id="聊天工具">聊天工具</h3>
-<p>TIM</p>
-<p>QQ for Windows10（Windows10 UWP）</p>
-<h3 id="网盘">网盘</h3>
-<p>1.~ 谷歌云盘~            (能不能用请遵循地方法律)</p>
-<p>2.OneDrive</p>
-<p>3.超星云盘</p>
-<h3 id="截图">截图</h3>
-<p>1.Snipaste</p>
-<p>2win10自带</p>
-<h3 id="bt下载">BT下载</h3>
-<p>1，uTorrentPortable，<a href="https://pcs.baidu.com/rest/2.0/pcs/file?method=download&amp;app_id=250528&amp;filename=uTorrent%20Pro%20v3.5.5.4566%20Portable.zip&amp;path=%2FuTorrent%20Pro%20v3.5.5.4566%20Portable.zip&amp;filename=uTorrent%20Pro%20v3.5.5.4566%20Portable.zip">下载地址</a></p>
-<h4 id="如有补充请在下方评论栏指出">如有补充请在下方评论栏指出</h4>
 ]]></content>
     </entry>
 </feed>

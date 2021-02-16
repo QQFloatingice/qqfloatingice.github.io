@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>关于4代魔改无限拉倍频的一些杂谈 - QQ floating ice</title>
+<title>终于，我修好了评论提醒 - QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -186,71 +186,27 @@ show_date_time()
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">关于4代魔改无限拉倍频的一些杂谈</h1>
+                          <h1 class="layout-post-title">终于，我修好了评论提醒</h1>
                           <div class="layout-post-meta">
                             <div class="item">
-                               <a href="https://qqfloatingice.github.io/tag/iXvfrvFWl/" class="post--keyword"
-                                data-title="电脑" data-type="post_tag" data-term-id="39">电脑</a>
                               
                             </div>
                             <div class="item">
-                              <span>2020-09-27</span>
+                              <span>2021-02-16</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p class="with-img"><img src="https://i.loli.net/2020/09/27/VIuoqGniyAdbReZ.jpg"
-                                class="attachment-full size-full wp-post-image" alt="关于4代魔改无限拉倍频的一些杂谈" /></p>
+                            <p class="with-img"><img src="https://i.loli.net/2021/02/16/FfDq9hp7YNgKSyc.jpg"
+                                class="attachment-full size-full wp-post-image" alt="终于，我修好了评论提醒" /></p>
                             
-                            <p>超频有风险，魔改需谨慎，本人不对本内容产生的问题承担任何责任</p>
-<p>写在前面：</p>
-<ol>
-<li>
-<p>如果系统有mcupdate_genuineintel.dll 都要删除了 才能拉倍频</p>
-</li>
-<li>
-<p>对于核显为 hd4600的魔改u暂时还没发现有在非笔记本平台上拉倍频成功过的，如果有的话，最好留个言，所以建议大家如果想拉倍频，最好还是上5200核显的魔改</p>
-</li>
-</ol>
-<p>最近看到国外有大神干了4代魔改即 i7-4xxxxmq改台式机封装的帖子这里做个翻译已即我亲自实践的一些体会，<a href="http://forum.notebookreview.com/threads/4ghz-overclock-i7-4xxxxmq-h-to-i7-extreme-conversion-intel-haswell-cpu-microcode-bug-hack.790177/">原帖地址</a></p>
-<p>这个外国教程的大致思路为两步：</p>
-<p>第一：删除306c3微码</p>
-<p>第二：用Throttlestop这个软件进行一堆骚操作</p>
-<p>第一个这个删除微码的步骤其实并不是每种CPU都需要，现在4代魔改大致分为两种CPU，分别是306c3（4600核显） 和30661（5200核显） ，基本上所有的主板都没有30661（5200核显）的微码，所以如果用5200核显的cpu的可以不用改bios就无限拉倍频</p>
-<p>删除微码我是利用UBU工具对bios微码进行删除</p>
-<p>删除完的话一般都会剩下306c2的微码</p>
-<p>这是删除前的<br>
-<img src="https://i.loli.net/2020/04/07/mNYgAMVWRuaQsrL.png" alt="" loading="lazy"></p>
-<p>这是删除后：</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/04/07/ez54GnDXRw1kvMi.png" alt="" loading="lazy"></figure>
-<p>然后第二大步就是要用Throttlestop来进行一堆骚操作了</p>
-<p>首先当然是先下载Throttlestop拉  这个比较好找就自己下载吧</p>
-<p>然后打开，点开里面的FIVR选项框</p>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/04/07/qmULsNF1l4cEfkZ.png" alt="" loading="lazy"></figure>
-<p>首先先看这个框里面的是不是+0，如果是+0是不能拉倍频的了，只能考虑Z87 Z97拉外频了</p>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2020/04/07/rogiPm352abEMTZ.png" alt="" loading="lazy"></figure>
-<p>然后重点来了！！！！！</p>
-<p>将4 Cores Active 先拉到最大，然后点ok退出，再重新点开FIVR,你就会发现Overclock后面的数字会跟着你turbo overclocking的数字+大了，例如下图是+2，每次你点这个最大可设置的倍频数都会变大2，想最大是多少，点多几次就行了</p>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2020/04/07/CZq1PSGE3nfloHt.png" alt="" loading="lazy"></figure>
-<p>然后就是最后一部步，回到主界面勾选set multipler 设置到自己想设置的频率，点击turn on（点完会变turn off）这样就设置成功了</p>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2020/04/07/YtGKwbSc26JX3sk.png" alt="" loading="lazy"></figure>
-<p>当然你们设置的倍频要有足够电压~电压也可以用这个软件里面的FIVR里面的选项来设置<br>
-http://valid.x86.fr/6n50n4<br>
-这个就是我拉的4750hq 。。。。这U肯定是同一晶圆的边角料。。。太雷了1.41v上4.4g都不是特别稳<br>
-上面就是无限拉的基本操作了</p>
-<p>同理，缓存频率也是可以无限拉的，只是藏得比较深，在FIVR设置里面</p>
-<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2020/04/07/6rWiSgypbnV1Y5u.png" alt="" loading="lazy"></figure>
-<p>ps：灰色是因为我暂时手套上这台机不是用的4代魔改=。=</p>
-<p>4代魔改这玩意主要是调用AVX(fpu)会特别热，功耗特别大<br>
-如果不调用AVX，像我电压上到1.41v上了液态金属后，还是能压在85度以内的（散热赤兔马）<br>
-所以核心问题在AVX上，<br>
-然后我们就可以利用功耗墙来对其限制，Throttlestop也提供了功耗墙的设置，我的设置是长功耗75W，正常不调用AVX的时候一般会小于85w，这个值就根据自己的散热来调整了。</p>
-<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2020/04/07/m879rKZIlhUMPgH.png" alt="" loading="lazy"></figure>
-<p>设置功耗墙在首页的TPL</p>
-<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2020/04/07/EUp98KgIPreaZOT.png" alt="" loading="lazy"></figure>
-<p>然后设置里面的长功耗和短功耗，可以设置短功耗保持多少秒变长功耗限制</p>
+                            <p>emmm</p>
+<p>不知何时，valine自带的评论提醒挂了，还好，有第三方及时补上（我没及时更新。。。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/02/16/TmCIWJ1oOU4DQHb.jpg" alt="屏幕截图 2021-02-16 231945.jpg" loading="lazy"></figure>
+<p>不过，现在能用就好了吗。。。</p>
+<p>这次，应该是修好了。。。</p>
 
                           </div>
                         </div>
@@ -268,8 +224,8 @@ http://valid.x86.fr/6n50n4<br>
 
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/guan-yu-4-dai-mo-gai-wu-xian-la-bei-pin-de-yi-xie-za-tan/" class="leancloud-visitors view"
-                              data-flag-title="关于4代魔改无限拉倍频的一些杂谈">
+                            <div id="/post/zhong-yu-wo-xiu-hao-liao-ping-lun-ti-xing/" class="leancloud-visitors view"
+                              data-flag-title="终于，我修好了评论提醒">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -284,59 +240,31 @@ http://valid.x86.fr/6n50n4<br>
                               <div class="card-content col-8 col-md-9">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/" class="title">
-                                      <h4>wallace-toolbox新版汉化</h4>
+                                    <a href="https://qqfloatingice.github.io/post/mei-guo-fan-dui-mei-guo/" class="title">
+                                      <h4>美国反对美国</h4>
                                     </a>
                                   </div>
                                   <div class="inner d-none d-sm-block">
                                     <div class="abstract">
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2020-10-16</div>
-                                </div>
-                              </div>
-                              <div class="card-thumb col-4 col-md-3">
-                                <div class="thumb">
-                                  <a href="https://qqfloatingice.github.io/post/wallace-toolbox-xin-ban-han-hua/"
-                                    style="background-image: url('https://i.loli.net/2020/07/27/qXslUZOY6AwyzQ1.jpg');"></a>
-                                </div>
-                              </div>
-                              
-                            </div>
+                                      <p>不知道为什么消失了。。。</p>
+<h5 id="全文转载自">全文转载<a href="https://github.com/zealotCE/AmericaOpposeAmerica">自</a></h5>
 
-                            <div class="post-card row">
-                              
-                              <div class="card-content col-8 col-md-9">
-                                <div class="card-body">
-                                  <div class="header">
-                                    <a href="https://qqfloatingice.github.io/post/jia-ming-645-yi-zhou-ti-yan-gan-shou/" class="title">
-                                      <h4>佳明645一周体验感受</h4>
-                                    </a>
-                                  </div>
-                                  <div class="inner d-none d-sm-block">
-                                    <div class="abstract">
-                                      
                                     </div>
                                   </div>
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2020-09-06</div>
+                                  <div class="item">2021-01-23</div>
                                 </div>
                               </div>
                               <div class="card-thumb col-4 col-md-3">
                                 <div class="thumb">
-                                  <a href="https://qqfloatingice.github.io/post/jia-ming-645-yi-zhou-ti-yan-gan-shou/"
-                                    style="background-image: url('https://i.loli.net/2020/09/06/W7T3piMyRqjIubw.jpg');"></a>
+                                  <a href="https://qqfloatingice.github.io/post/mei-guo-fan-dui-mei-guo/"
+                                    style="background-image: url('https://i.loli.net/2021/01/23/Yk5nRz6yjbQeqtP.jpg');"></a>
                                 </div>
                               </div>
                               
                             </div>
-
                             
                           </div>
                         </div>

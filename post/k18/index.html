@@ -97,7 +97,7 @@ if(engine!='1') {
 						<div class="logo">
 							<a href="https://qqfloatingice.github.io/">
 								<img class="logo"
-									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1613811888410"
+									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1613813000389"
 									alt="">
 							</a>
 						</div>
@@ -144,7 +144,7 @@ if(engine!='1') {
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1613811888410" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1613813000389" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -347,7 +347,26 @@ reboot
     avatar: 'mp',
     placeholder: '加入讨论...'
   })
+
 </script>
+
+
+var engine = document.cookie.replace(/(?:(?:^|.*;\s*)engine\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+if(engine!='1') {
+  fetch('https://quan.suning.com/getSysTime.do')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(date) {
+    var hours = new Date(date.sysTime2).getHours();
+    if(hours>7 && hours<23){
+      fetch('https://你云引擎的地址');
+      var exp = new Date(date.sysTime2);
+      exp.setTime(exp.getTime() + 20*60*1000);
+      document.cookie = "engine=1;path=/;expires="+ exp.toGMTString();
+    }
+  })
+}
                         
                       </div>
                     </div>

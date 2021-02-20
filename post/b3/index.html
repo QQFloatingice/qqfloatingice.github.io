@@ -51,34 +51,17 @@ show_date_time()
 ">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<link type='text/css' rel='stylesheet' href='https://qqfloatingice.github.io//styles/main.css' media='screen' />
+<link type='text/css' rel='stylesheet' href='http://localhost:4000/styles/main.css' media='screen' />
 <link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
 <link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/jquery.js'></script>
+<script type="text/javascript" src='http://localhost:4000/media/scripts/jquery.js'></script>
 <script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
 
 <script>
     hljs.initHighlightingOnLoad();
 </script>
 
-
-  var engine = document.cookie.replace(/(?:(?:^|.*;\s*)engine\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-if(engine!='1') {
-  fetch('https://quan.suning.com/getSysTime.do')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(date) {
-    var hours = new Date(date.sysTime2).getHours();
-    if(hours>5 && hours<23){
-      fetch('https://qqfloatingice.avosapps.us/');
-      var exp = new Date(date.sysTime2);
-      exp.setTime(exp.getTime() + 20*60*1000);
-      document.cookie = "engine=1;path=/;expires="+ exp.toGMTString();
-    }
-  })
-}
 
 
 </head>
@@ -95,9 +78,9 @@ if(engine!='1') {
 					<div class="navbar">
 
 						<div class="logo">
-							<a href="https://qqfloatingice.github.io/">
+							<a href="http://localhost:4000">
 								<img class="logo"
-									src="https://qqfloatingice.github.io//media/images/site_avatar.png?v=1613813000389"
+									src="http://localhost:4000/media/images/site_avatar.png?v=1613813000300"
 									alt="">
 							</a>
 						</div>
@@ -144,7 +127,7 @@ if(engine!='1') {
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1613813000389" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1613813000300" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -331,7 +314,7 @@ XTU之所以是XTU，正是因为全英文的界面+各种术语及其的不友�
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://qqfloatingice.github.io/post/a4/" class="title">
+                                    <a href="http://localhost:4000/post/a4/" class="title">
                                       <h4>开学了</h4>
                                     </a>
                                   </div>
@@ -354,7 +337,7 @@ XTU之所以是XTU，正是因为全英文的界面+各种术语及其的不友�
                               <div class="card-content col-12">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://qqfloatingice.github.io/post/b2/" class="title">
+                                    <a href="http://localhost:4000/post/b2/" class="title">
                                       <h4>发几张超级月亮</h4>
                                     </a>
                                   </div>
@@ -378,9 +361,9 @@ XTU之所以是XTU，正是因为全英文的界面+各种术语及其的不友�
 
                         <div class="layout-comments"></div>
                         
-                        <script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/zan.js'></script>
-<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/av-min.js'></script>
-<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/Valine.min.js'></script>
+                        <script type="text/javascript" src='http://localhost:4000/media/scripts/zan.js'></script>
+<script type="text/javascript" src='http://localhost:4000/media/scripts/av-min.js'></script>
+<script type="text/javascript" src='http://localhost:4000/media/scripts/Valine.min.js'></script>
 
 <script>
   var valine = new Valine();
@@ -449,6 +432,11 @@ if(engine!='1') {
         </div>
       </div>
     </div>
+
+
+
+
+
 
     <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 
@@ -567,7 +555,7 @@ show_date_time()
 
 	</div>
 
-	<script type="text/javascript" src='https://qqfloatingice.github.io//media/scripts/main.js'></script>
+	<script type="text/javascript" src='http://localhost:4000/media/scripts/main.js'></script>
 	
 	<script>
 		var _hmt = _hmt || [];

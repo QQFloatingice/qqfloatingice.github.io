@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.top</id>
     <title>QQ floating ice</title>
-    <updated>2021-02-25T11:40:41.123Z</updated>
+    <updated>2021-02-26T08:47:08.369Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.top"/>
     <link rel="self" href="https://qqfloatingice.top/atom.xml"/>
@@ -54,6 +54,32 @@ show_date_time()
     <logo>https://qqfloatingice.top/images/avatar.png</logo>
     <icon>https://qqfloatingice.top/favicon.ico</icon>
     <rights>All rights reserved 2021, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[如何运用WebIDE开启kaios通话录音]]></title>
+        <id>https://qqfloatingice.top/post/ru-he-yun-yong-webide-kai-qi-kaios-tong-hua-lu-yin/</id>
+        <link href="https://qqfloatingice.top/post/ru-he-yun-yong-webide-kai-qi-kaios-tong-hua-lu-yin/">
+        </link>
+        <updated>2021-02-26T08:37:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文汉化自<a href="https://groups.google.com/g/bananahackers/c/WpZBR4a06WA/m/Fr_2kgBqDAAJ">bananahackersl论坛</a></p>
+<p>目前该功能已可通过<a href="https://qqfloatingice.top/post/wallace-toolbox-xin-ban-han-hua/">华莱士工具箱</a>实现</p>
+<p>本教材仅对kaios 2.5.2的设备生效</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文汉化自<a href="https://groups.google.com/g/bananahackers/c/WpZBR4a06WA/m/Fr_2kgBqDAAJ">bananahackersl论坛</a></p>
+<p>目前该功能已可通过<a href="https://qqfloatingice.top/post/wallace-toolbox-xin-ban-han-hua/">华莱士工具箱</a>实现</p>
+<p>本教材仅对kaios 2.5.2的设备生效</p>
+<!-- more -->
+<h4 id="你需要将设备与webide连接并转到设备设置并进行以下设置">你需要将设备与webide连接并转到“设备设置”并进行以下设置</h4>
+<ol>
+<li>callrecording.mode (string) = on or auto (手动或自动录音);</li>
+<li>callrecording.notification.enabled = false - just for sake of it;</li>
+<li>callrecording.vibration.enabled = false - just for sake of it;</li>
+<li>callrecording.file.format = wav (默认位3gpp格式, IIRC也可以指定其ogg和opus格式).</li>
+</ol>
+<p>现在，如果您的KaiOS手机具有“摄像头”按钮，则将使用该按钮切换录制。<br>
+如果没有“相机”按钮，则可以通过按向左箭头来切换录制。这将会将出现一个“记录”图标。</p>
+<p>生成的文件将存储在主存储器（内部或TF卡）的“ callrecording”目录中。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[希望这次修好了。。。]]></title>
         <id>https://qqfloatingice.top/post/xi-wang-zhe-ci-xiu-hao-liao/</id>
@@ -2490,16 +2516,6 @@ http://valid.x86.fr/6n50n4<br>
 <h6 id="ps真正原因我不会写总结">p.s.：真正原因，我不会写总结。。。。</h6>
 <p><a href=""></a>更详细的解释在<a href="https://www.garmin.com.cn/products/wearables/Forerunner645/#featureTab">这里</a></p>
 <p>对比测评在<a href="http://www.codoon.com/iec/article/0BdgGe9Ixoo=">这里</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于我又一个哥哥出国留学的事]]></title>
-        <id>https://qqfloatingice.top/post/guan-yu-wo-you-yi-ge-ge-ge-chu-guo-liu-xue-de-shi/</id>
-        <link href="https://qqfloatingice.top/post/guan-yu-wo-you-yi-ge-ge-ge-chu-guo-liu-xue-de-shi/">
-        </link>
-        <updated>2020-09-06T03:05:25.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="又双叒叕出去一个">又双叒叕出去一个</h1>
-<h6 id="随便证明一下我还活着">随便证明一下我还活着</h6>
 ]]></content>
     </entry>
 </feed>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-<title>希望这次修好了。。。 - QQ floating ice</title>
+<title>如何运用WebIDE开启kaios通话录音 - QQ floating ice</title>
 <meta name="description" content="&lt;p&gt;A personal blog for QQ floating ice&lt;/p&gt;
 
 
@@ -189,50 +189,36 @@ show_date_time()
                     <div class="col-12 col-lg-10">
                       <div class="layout-post-main m-right m-md-right">
                         <div class="layout-post-header">
-                          <h1 class="layout-post-title">希望这次修好了。。。</h1>
+                          <h1 class="layout-post-title">如何运用WebIDE开启kaios通话录音</h1>
                           <div class="layout-post-meta">
                             <div class="item">
                               
                             </div>
                             <div class="item">
-                              <span>2021-02-20</span>
+                              <span>2021-02-26</span>
                             </div>
                           </div>
                         </div>
                         <div class="layout-post-content">
                           <div class="layout-post-item">
                             
-                            <p class="with-img"><img src="https://i.loli.net/2021/02/20/ZgkRKrLOz8IcxTC.jpg"
-                                class="attachment-full size-full wp-post-image" alt="希望这次修好了。。。" /></p>
+                            <p class="with-img"><img src="https://i.loli.net/2021/02/26/TWOJFLRQYStbifz.jpg"
+                                class="attachment-full size-full wp-post-image" alt="如何运用WebIDE开启kaios通话录音" /></p>
                             
-                            <p>如你所见，leancloud要限制白嫖用户定时任务，使其不能用于自动唤醒。。。这就使我的自动提醒功能失效了。。。</p>
+                            <p>本文汉化自<a href="https://groups.google.com/g/bananahackers/c/WpZBR4a06WA/m/Fr_2kgBqDAAJ">bananahackersl论坛</a></p>
+<p>目前该功能已可通过<a href="https://qqfloatingice.top/post/wallace-toolbox-xin-ban-han-hua/">华莱士工具箱</a>实现</p>
+<p>本教材仅对kaios 2.5.2的设备生效</p>
 <!-- more -->
-<p>但是，作为一个白嫖党，我是绝对不会升级标准版实例的（一天1.06USD。。。）所以，为解决这个问题，我只能借助搜索引擎。。。</p>
-<p>好在已经有人提出了<a href="https://crosschannel.cc/daily/valine-admin-autoAwaken.html">解决方案</a></p>
-<p>其原理为北京时间8点到晚上23点只要有人访问博客就会触发js发ajax请求唤醒云引擎。由于云引擎睡眠的时候发请求不一定会成功（但是有请求就会醒）所有没有做请求失败处理。请求发送后设置cookie避免20分钟内刷新等操作重复发请求。</p>
-<h5 id="使用方法">使用方法</h5>
-<p>把以下js代码放在valine的初始化代码后面，没必要放body里，记得把云引擎地址改成自己的。valine-admin配置里的ADMIN_URL就是云引擎地址。</p>
-<pre><code>var engine = document.cookie.replace(/(?:(?:^|.*;\s*)engine\s*\=\s*([^;]*).*$)|^.*$/, &quot;$1&quot;) || '0';
-if(engine!='1') {
-  fetch('https://quan.suning.com/getSysTime.do')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(date) {
-    var hours = new Date(date.sysTime2).getHours();
-    if(hours&gt;7 &amp;&amp; hours&lt;23){
-      fetch('https://你云引擎的地址');
-      var exp = new Date(date.sysTime2);
-      exp.setTime(exp.getTime() + 20*60*1000);
-      document.cookie = &quot;engine=1;path=/;expires=&quot;+ exp.toGMTString();
-    }
-  })
-}
-
-
-
-
-</code></pre>
+<h4 id="你需要将设备与webide连接并转到设备设置并进行以下设置">你需要将设备与webide连接并转到“设备设置”并进行以下设置</h4>
+<ol>
+<li>callrecording.mode (string) = on or auto (手动或自动录音);</li>
+<li>callrecording.notification.enabled = false - just for sake of it;</li>
+<li>callrecording.vibration.enabled = false - just for sake of it;</li>
+<li>callrecording.file.format = wav (默认位3gpp格式, IIRC也可以指定其ogg和opus格式).</li>
+</ol>
+<p>现在，如果您的KaiOS手机具有“摄像头”按钮，则将使用该按钮切换录制。<br>
+如果没有“相机”按钮，则可以通过按向左箭头来切换录制。这将会将出现一个“记录”图标。</p>
+<p>生成的文件将存储在主存储器（内部或TF卡）的“ callrecording”目录中。</p>
 
                           </div>
                         </div>
@@ -256,8 +242,8 @@ if(engine!='1') {
 
                         <div class="layout-post-social">
                           <div class="item reader">
-                            <div id="/post/xi-wang-zhe-ci-xiu-hao-liao/" class="leancloud-visitors view"
-                              data-flag-title="希望这次修好了。。。">
+                            <div id="/post/ru-he-yun-yong-webide-kai-qi-kaios-tong-hua-lu-yin/" class="leancloud-visitors view"
+                              data-flag-title="如何运用WebIDE开启kaios通话录音">
                               <span class="post-meta-item-text">阅读 </span>
                               <span class="leancloud-visitors-count"></span>
                             </div>
@@ -272,62 +258,30 @@ if(engine!='1') {
                               <div class="card-content col-8 col-md-9">
                                 <div class="card-body">
                                   <div class="header">
-                                    <a href="https://qqfloatingice.top/post/ru-he-yun-yong-webide-kai-qi-kaios-tong-hua-lu-yin/" class="title">
-                                      <h4>如何运用WebIDE开启kaios通话录音</h4>
+                                    <a href="https://qqfloatingice.top/post/xi-wang-zhe-ci-xiu-hao-liao/" class="title">
+                                      <h4>希望这次修好了。。。</h4>
                                     </a>
                                   </div>
                                   <div class="inner d-none d-sm-block">
                                     <div class="abstract">
-                                      <p>本文汉化自<a href="https://groups.google.com/g/bananahackers/c/WpZBR4a06WA/m/Fr_2kgBqDAAJ">bananahackersl论坛</a></p>
-<p>目前该功能已可通过<a href="https://qqfloatingice.top/post/wallace-toolbox-xin-ban-han-hua/">华莱士工具箱</a>实现</p>
-<p>本教材仅对kaios 2.5.2的设备生效</p>
+                                      <p>如你所见，leancloud要限制白嫖用户定时任务，使其不能用于自动唤醒。。。这就使我的自动提醒功能失效了。。。</p>
 
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card-footer">
-                                  <div class="item"><span>上一篇</span></div>
-                                  <div class="item">2021-02-26</div>
-                                </div>
-                              </div>
-                              <div class="card-thumb col-4 col-md-3">
-                                <div class="thumb">
-                                  <a href="https://qqfloatingice.top/post/ru-he-yun-yong-webide-kai-qi-kaios-tong-hua-lu-yin/"
-                                    style="background-image: url('https://i.loli.net/2021/02/26/TWOJFLRQYStbifz.jpg');"></a>
-                                </div>
-                              </div>
-                              
-                            </div>
-
-                            <div class="post-card row">
-                              
-                              <div class="card-content col-8 col-md-9">
-                                <div class="card-body">
-                                  <div class="header">
-                                    <a href="https://qqfloatingice.top/post/zhong-yu-wo-xiu-hao-liao-ping-lun-ti-xing/" class="title">
-                                      <h4>终于，我修好了评论提醒</h4>
-                                    </a>
-                                  </div>
-                                  <div class="inner d-none d-sm-block">
-                                    <div class="abstract">
-                                      
                                     </div>
                                   </div>
                                 </div>
                                 <div class="card-footer">
                                   <div class="item"><span>下一篇</span></div>
-                                  <div class="item">2021-02-16</div>
+                                  <div class="item">2021-02-20</div>
                                 </div>
                               </div>
                               <div class="card-thumb col-4 col-md-3">
                                 <div class="thumb">
-                                  <a href="https://qqfloatingice.top/post/zhong-yu-wo-xiu-hao-liao-ping-lun-ti-xing/"
-                                    style="background-image: url('https://i.loli.net/2021/02/16/FfDq9hp7YNgKSyc.jpg');"></a>
+                                  <a href="https://qqfloatingice.top/post/xi-wang-zhe-ci-xiu-hao-liao/"
+                                    style="background-image: url('https://i.loli.net/2021/02/20/ZgkRKrLOz8IcxTC.jpg');"></a>
                                 </div>
                               </div>
                               
                             </div>
-
                             
                           </div>
                         </div>
@@ -388,11 +342,7 @@ if(engine!='1') {
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li><a href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a></li>
-</ul>
-</li>
+<li><a href="#%E4%BD%A0%E9%9C%80%E8%A6%81%E5%B0%86%E8%AE%BE%E5%A4%87%E4%B8%8Ewebide%E8%BF%9E%E6%8E%A5%E5%B9%B6%E8%BD%AC%E5%88%B0%E8%AE%BE%E5%A4%87%E8%AE%BE%E7%BD%AE%E5%B9%B6%E8%BF%9B%E8%A1%8C%E4%BB%A5%E4%B8%8B%E8%AE%BE%E7%BD%AE">你需要将设备与webide连接并转到“设备设置”并进行以下设置</a></li>
 </ul>
 </li>
 </ul>

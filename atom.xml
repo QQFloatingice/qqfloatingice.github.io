@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.top</id>
     <title>QQ floating ice</title>
-    <updated>2021-05-28T09:40:41.718Z</updated>
+    <updated>2021-07-04T15:27:55.386Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.top"/>
     <link rel="self" href="https://qqfloatingice.top/atom.xml"/>
@@ -54,6 +54,22 @@ show_date_time()
     <logo>https://qqfloatingice.top/images/avatar.png</logo>
     <icon>https://qqfloatingice.top/favicon.ico</icon>
     <rights>All rights reserved 2021, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[离开的是这场盛夏 而不是我们]]></title>
+        <id>https://qqfloatingice.top/post/chi-kai-de-shi-zhe-chang-sheng-xia-er-bu-shi-wo-men/</id>
+        <link href="https://qqfloatingice.top/post/chi-kai-de-shi-zhe-chang-sheng-xia-er-bu-shi-wo-men/">
+        </link>
+        <updated>2021-07-04T15:14:36.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>就是这样，该来的总是回来的。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/07/04/PrERJLNgdMVw3YC.jpg" alt="psc _2_.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/07/04/krcgDqhI2nbzaRT.jpg" alt="A7A76B4269D3BA112154CD383B4D85BA.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/07/04/CZR5inhHaBWdQUu.jpg" alt="psc _1_.jpg" loading="lazy"></figure>
+<p>#2020.9-2021.7#<br>
+我们一定都会追到自己的梦 奔赴不同的人生<br>
+七班bye～后会有期.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于内卷。。。]]></title>
         <id>https://qqfloatingice.top/post/guan-yu-nei-juan/</id>
@@ -2425,32 +2441,6 @@ if(engine!='1') {
 <figure data-type="image" tabindex="1"><img src="https://service.sorasky.in/RandPic/pic" alt="" loading="lazy"></figure>
 <h6 id="本文经9次修改目前定稿与-2020年9月8日8时58分53秒第四节晚自习上课时">本文经9次修改，目前定稿与 2020年9月8日8时58分53秒，第四节晚自习上课时。</h6>
 <h5 id="by-正在摸鱼的qq-floating-ice">By 正在摸鱼的QQ Floating Ice</h5>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[wallace-toolbox新版汉化]]></title>
-        <id>https://qqfloatingice.top/post/wallace-toolbox-xin-ban-han-hua/</id>
-        <link href="https://qqfloatingice.top/post/wallace-toolbox-xin-ban-han-hua/">
-        </link>
-        <updated>2020-10-16T08:34:10.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="版本号">版本号</h3>
-<p>wallace-toolbox-0.0.6（截图懒得换了</p>
-<h3 id="下载地址">下载地址</h3>
-<p><a href="https://pan-yz.chaoxing.com/share/info/cdd0b7c1afa630f5">0.0.5</a>  蓝奏云：https://wws.lanzous.com/iZno8lpj82f<br>
-密码:8knv</p>
-<p><a href="https://pan-yz.chaoxing.com/share/info/a8a3fd242dd24887">0.0.6</a>     蓝奏云：https://wws.lanzous.com/iqP65lpj5yj<br>
-密码:ba8e</p>
-<p><a href="https://wws.lanzous.com/iifTzn4ht7a">0.0.6.1  密码:1mbn</a></p>
-<h3 id="更新说明">更新说明</h3>
-<h4 id="0061">0.0.6.1</h4>
-<p>1.修改了部分错别字以及部分机翻语句</p>
-<h4 id="006">0.0.6</h4>
-<p>1.增加了移除所以的预装APP功能</p>
-<h4 id="005">0.0.5</h4>
-<p>1.增加了更改WiFi/l蓝牙 MAC地址功能</p>
-<p>2.没了</p>
-<p>3.。。。</p>
-<h5 id="本人是个英语学渣汉化如有错误请多多包函">本人是个英语学渣，汉化如有错误请多多包函</h5>
 ]]></content>
     </entry>
 </feed>

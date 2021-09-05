@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qqfloatingice.top</id>
     <title>QQ floating ice</title>
-    <updated>2021-07-04T15:43:17.453Z</updated>
+    <updated>2021-09-05T05:50:10.138Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qqfloatingice.top"/>
     <link rel="self" href="https://qqfloatingice.top/atom.xml"/>
@@ -54,6 +54,20 @@ show_date_time()
     <logo>https://qqfloatingice.top/images/avatar.png</logo>
     <icon>https://qqfloatingice.top/favicon.ico</icon>
     <rights>All rights reserved 2021, QQ floating ice</rights>
+    <entry>
+        <title type="html"><![CDATA[领域合照！！！]]></title>
+        <id>https://qqfloatingice.top/post/ling-yu-he-zhao/</id>
+        <link href="https://qqfloatingice.top/post/ling-yu-he-zhao/">
+        </link>
+        <updated>2021-07-16T14:19:51.000Z</updated>
+        <summary type="html"><![CDATA[<p>难得人齐。。。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>难得人齐。。。</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/07/16/Ds4iVLeAG1JIt9F.png" alt="" loading="lazy"></figure>
+<p>嫖ander的领域有点时间了罢。。。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[离开的是这场盛夏 而不是我们]]></title>
         <id>https://qqfloatingice.top/post/chi-kai-de-shi-zhe-chang-sheng-xia-er-bu-shi-wo-men/</id>
@@ -2355,92 +2369,6 @@ if(engine!='1') {
 <p>（这第250天纪念日把我也整的有点250，写的有点乱，将就着看吧</p>
 <p>P.s.<br>
 <a href="https://qqfloatingice.github.io/post/fq">关于某圈的危害</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[QQ foating ice]]></title>
-        <id>https://qqfloatingice.top/post/2/</id>
-        <link href="https://qqfloatingice.top/post/2/">
-        </link>
-        <updated>2020-10-17T14:22:18.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="关于本站">关于本站</h3>
-<h4 id="为何建立">为何建立</h4>
-<p>寒假期间因为一只蝙蝠。。。。。。我在家上网课摸鱼的时候因为比较闲，就把我曾经因为时间和精力等原因关停的动态博客重开（苦逼未成年学生党的悲哀），本站托管在gitpage上，由Gridea强力驱动，目前本站主页已被各大主流搜索引擎收录dog.jpg</p>
-<h3 id="关于博主">关于博主</h3>
-<h4 id="年龄与教育经历">年龄与教育经历</h4>
-<p>出生于2005年9月前，关于我的年龄与级端有兴趣可以自己算一下。。。</p>
-<h4 id="爱好技能">爱好&amp;技能</h4>
-<p>博主是个奇奇怪怪的人，爱好运动与宅家，这里放几个数据吧</p>
-<p>1km最佳成绩：2'58&quot;<br>
-5km最佳成绩：22'29&quot;<br>
-10km最佳成绩：50&quot;28<br>
-半马最佳成绩：1h 48m 31s<br>
-全马最佳成绩：4h 01m 14s<br>
-曾经在8个小时内从上海骑单车到高铁2h行程时间的某城市<br>
-曾经在家出上课外4年没出过门</p>
-<p>目前博主在建站方面有一定经验，稍会板绘、PS、剪辑、影视后期，ous！轻度玩家（刚入键鼠流），Mc1.7.10遗民，Golang学习中， <s>C#，C＋＋</s>  都位于遗忘的边缘，前端基本狗屁不通。</p>
-<p>.</p>
-<h4 id="如何联系博主">如何联系博主</h4>
-<h5 id="邮箱">邮箱</h5>
-<ul>
-<li>
-<p>qqfloatingice.gmail.com</p>
-</li>
-<li>
-<p>1449548774@qq.com</p>
-</li>
-<li>
-<p>l482949498@qq.com</p>
-</li>
-<li>
-<p>2716314359@qq.com</p>
-</li>
-<li>
-<p>1640800953@qq.com</p>
-</li>
-<li>
-<p>654704772@qq.com</p>
-</li>
-</ul>
-<h5 id="qq">QQ</h5>
-<ul>
-<li>
-<p>1449548774</p>
-</li>
-<li>
-<p>482949498</p>
-</li>
-<li>
-<p>2716314359</p>
-</li>
-<li>
-<p>1640800953</p>
-</li>
-<li>
-<p>654704772</p>
-</li>
-</ul>
-<h5 id="微信">微信</h5>
-<ul>
-<li>qqfloatingice</li>
-</ul>
-<h5 id="推特">推特</h5>
-<ul>
-<li>https://twitter.com/tyx94219678</li>
-</ul>
-<h5 id="微博">微博</h5>
-<ul>
-<li>QQfloatingice</li>
-</ul>
-<h5 id="小破站">小破站</h5>
-<ul>
-<li>QQ-Floating-Ice</li>
-</ul>
-<h4 id="随机图来自sora">随机图（来自Sora）</h4>
-<h6 id="百合向">百合向</h6>
-<figure data-type="image" tabindex="1"><img src="https://service.sorasky.in/RandPic/pic" alt="" loading="lazy"></figure>
-<h6 id="本文经9次修改目前定稿与-2020年9月8日8时58分53秒第四节晚自习上课时">本文经9次修改，目前定稿与 2020年9月8日8时58分53秒，第四节晚自习上课时。</h6>
-<h5 id="by-正在摸鱼的qq-floating-ice">By 正在摸鱼的QQ Floating Ice</h5>
 ]]></content>
     </entry>
 </feed>
